@@ -1,0 +1,30 @@
+header,
+footer {
+  background-color: #11172d;
+  color: #f5fafc;
+}
+
+body {
+  font-family: "Quattrocento Sans", Verdana, Tahoma, sans-serif;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+h1,
+h2 {
+  font-family: "Quattrocento", serif;
+}
+
+/* CTA */
+.cta {
+  background-color: #fc8118;
+  color: #f5fafc;
+  border-radius: 25px;
+  font-size: 1.125em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+}
