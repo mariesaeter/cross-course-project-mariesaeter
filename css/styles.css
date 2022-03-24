@@ -1,21 +1,63 @@
+/* CSS grid*/
+
 header,
 footer {
   background-color: #11172d;
   color: #f5fafc;
+  display: flex;
+  align-items: center;
 }
 
 body {
   font-family: "Quattrocento Sans", Verdana, Tahoma, sans-serif;
   margin: 0;
+  padding: 0;
+  background-color: #f5fafc;
+}
+
+nav,
+#hamburger-menu {
+  display: none;
 }
 
 nav li {
-  display: inline-block;
+  text-transform: uppercase;
+  list-style-type: none;
+  display: inline-flex;
+}
+
+header a {
+  color: #11172d;
+  text-decoration: none;
+  padding: 15px;
+}
+
+footer a {
+    color: #f5fafc;
+    text-decoration: none;
+    padding: 15px;
 }
 
 h1,
 h2 {
   font-family: "Quattrocento", serif;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.dark-background {
+  background-color: #11172d;
+  color: #f5fafc;
+  text-align: center;
+  padding: 30px 16px;
 }
 
 /* CTA */
@@ -27,4 +69,58 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
   padding: 15px 40px;
+}
+
+.cta-light {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: #f5fafc;
+  font-size: 1em;
+  margin: 20px 0;
+  display:inline-block;
+}
+
+/* Hamburger menu */
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+  background-color: #f5fafc;
+}
+
+/* Home */
+.background-men {
+  background-image: url(../images/home-man.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position-x: left;
+  background-position-y: bottom;
+  min-height: 48vh;
+  width:100%;
+  text-align: center;
+  padding-top: 65%;
+  box-sizing: border-box;
+}
+
+.background-women {
+  background-image: url(../images/home-women.jpg);
+}
+
+/* Media Quieries */
+@media (min-width: 600px) {
+  nav {
+    display: block;
+  }
+
+  header a {
+      color:#f5fafc;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .container {
+      flex-direction: row;
+  }
+  }
 }

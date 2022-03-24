@@ -15,8 +15,10 @@
   <body>
     <header>
       <a href="index.html">
-      <img src="images/logo.png" alt="rainydays logo">
+      <img src="images/logo.png" alt="rainydays logo" class="logo">
     </a>
+    <label for="hamburger-menu" class="hamburger"><img src="images/menu.png" alt="hamburger menu"></label>
+    <input type="checkbox" id="hamburger-menu">
     <nav>
       <ul>
         <li><a href="men.html">Men</a></li>
@@ -24,25 +26,28 @@
         <li><a href="men.html">Unisex</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
+      <ul>
+        <li><a href="..."><img src="images/favorite.png" alt="favorite heart"> Favorite</a></li>
+        <li><a href="..."><img src="images/shopping-bag.png" alt="shopping basket">Basket</a></li>
+        <li><a href="..."><img src="images/login.png" alt="user">Profile</a></li>
+      </ul>
     </nav>
     </header>
     <main>
-      <section>
-        <div>
-          <img src="">
+      <section class="container">
+        <div class="background-men">
           <p><a class="cta" href="men.html">Shop Men</a></p>
         </div>
-        <div>
-          <img src="">
+        <div class="background-men background-women">
           <p><a class="cta" href="men.html">Shop Women</a></p>
         </div>
       </section>
-      <section>
+      <section class="dark-background">
         <h1>100% waterproof</h1>
         <h2>High durability and comfort</h2>
         <p>Rainydays' jackets are coated to be sustain high amount of rain and snow, 
           without loosing the comforting feel of wearing the jacket.</p>
-        <a class="" href="about.html">Learn More</a>
+        <a class="cta cta-light" href="about.html">Learn More</a>
       </section>
       <section>
         <h2>Best Sellers</h2>
