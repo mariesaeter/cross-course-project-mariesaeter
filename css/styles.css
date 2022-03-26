@@ -6,9 +6,6 @@ footer {
   color: #f5fafc;
   display: flex;
   align-items: center;
-}
-
-header {
   width: 100%;
   padding-left: 15px;
   box-sizing: border-box;
@@ -19,12 +16,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5fafc;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav,
 #hamburger-menu {
   display: none;
-  width: 100%;
 }
 
 /*nav li {
@@ -83,6 +81,12 @@ h2 {
   color: #f5fafc;
   text-align: center;
   padding: 30px 16px;
+}
+
+.waterproof p {
+  padding-left: 15%;
+  padding-right: 15%;
+  line-height: 1.5em;
 }
 
 /* CTA */
@@ -147,12 +151,40 @@ h2 {
   background-position-y: center;
 }
 
+/* Best sellers */
+.container-best-sellers {
+  padding: 30px;
+}
+
+.product-img {
+  width: 250px;
+}
+
+/* Get updates */
+.subscribe {
+  background-color: #e9eef1;
+  color: #11172d;
+  text-align: center;
+  padding: 30px 16px;
+}
+
+.subscribe p {
+  padding-left: 15%;
+  padding-right: 15%;
+  line-height: 1.5em;
+}
+
+fieldset {
+  border: none;
+}
+
 /* Media Quieries */
 @media (min-width: 600px) {
   nav {
     display: flex;
     align-items: center;
     padding: 20px;
+    box-sizing: border-box;
   }
 
   header a {
@@ -162,7 +194,7 @@ h2 {
   nav ul,
   nav a {
     list-style-type: none;
-    margin: 0;
+    margin: 0 25px;
     padding: 0;
     text-transform: uppercase;
   }
@@ -171,15 +203,45 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   nav ul {
     display: flex;
-    align-items: right;
   }
 
-  nav ul li {
-    margin-right: 20px;
+  /*nav ul li {
+    margin-right: 30px;
+
+  }
+*/
+
+  /*.nav-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    gap: 10px;
+    grid-auto-rows: minmax(auto, auto);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .icon {
+    width: fit-content;
+    block-size: fit-content;
+  }*/
+
+  figure {
+    display: flex;
+    flex-flow: column;
+    max-width: 36px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  figure figcaption {
+    font-size: smaller;
+    padding: 5px;
   }
 
   .hamburger {
@@ -189,5 +251,10 @@ h2 {
   .container-shopnav {
     flex-direction: row;
     margin-bottom: 0px;
+  }
+
+  .waterproof p {
+    padding-left: 30%;
+    padding-right: 30%;
   }
 }
