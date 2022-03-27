@@ -31,6 +31,17 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 2.625em;
+}
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
 h1,
 h2 {
   font-family: "Quattrocento", serif;
@@ -293,7 +304,7 @@ footer {
 
 /* SECTION - Best sellers */
 section.bestsellers {
-  width: 70%;
+  width: 75%;
   margin: 30px auto;
 }
 
@@ -337,7 +348,6 @@ section.bestsellers {
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row: 3;
-  font-size: 1.5em;
   text-decoration: none;
   color: #11172d;
 }
@@ -346,7 +356,6 @@ section.bestsellers {
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row: 4;
-  font-size: 1.125em;
 }
 
 .product-fav {
