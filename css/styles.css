@@ -230,6 +230,15 @@ footer {
 /* HOME */
 
 /* Shop navigation with CTA */
+.container-shopnav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 48vh;
+  max-height: 88vh;
+  margin-bottom: 50px;
+}
 .item-shop-men {
   background-image: url(../images/home-man.jpg);
   background-size: cover;
@@ -245,15 +254,6 @@ footer {
   background-size: cover;
   background-position-x: left;
   background-position-y: center;
-}
-.container-shopnav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-height: 48vh;
-  max-height: 88vh;
-  margin-bottom: 50px;
 }
 
 .wrapper {
@@ -309,6 +309,14 @@ section.bestsellers {
   gap: 25px;
 }
 
+.product-card {
+  display: grid;
+  grid-template-columns: 50px 75px 75px 50px;
+  width: 250px;
+  grid-template-rows: 50px auto;
+  grid-row-gap: 5px;
+}
+
 .product-img {
   grid-column: 1;
   grid-row-start: 1;
@@ -325,14 +333,6 @@ section.bestsellers {
   transform: scale(1.02);
 }
 
-.product-card {
-  display: grid;
-  grid-template-columns: 50px 75px 75px 50px;
-  width: 250px;
-  grid-template-rows: 50px auto;
-  grid-row-gap: 5px;
-}
-
 .product-title {
   grid-column-start: 1;
   grid-column-end: span 3;
@@ -342,19 +342,19 @@ section.bestsellers {
   color: #11172d;
 }
 
+.product-description {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row: 4;
+  font-size: 1.125em;
+}
+
 .product-fav {
   width: 50%;
   justify-self: center;
   align-self: center;
   grid-column: 4;
   grid-row: 3;
-}
-
-.product-description {
-  grid-column-start: 1;
-  grid-column-end: span 3;
-  grid-row: 4;
-  font-size: 1.125em;
 }
 
 .product-price {
