@@ -171,10 +171,6 @@ figure figcaption {
   padding: 5px;
 }
 
-.hamburger {
-  flex-grow: 0;
-}
-
 .hamburger img {
   width: 50%;
 }
@@ -448,7 +444,7 @@ section.subscribe {
   nav.flexbox {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
     height: 110px;
     box-sizing: border-box;
@@ -465,6 +461,16 @@ section.subscribe {
     display: inline;
   }
 
+  /* Shop navigation with CTA's */
+  .container-shopnav {
+    flex-direction: row;
+    margin-bottom: 0px;
+  }
+
+  .bottom {
+    align-self: center;
+  }
+
   footer {
     padding: 30px 25%;
   }
@@ -475,15 +481,17 @@ section.subscribe {
     margin: 0;
     align-self: flex-end;
   }
+
+  .hamburger {
+    flex-grow: 0;
+  }
 }
 
 @media (min-width: 992px) {
   /* Header & navigation */
 
   nav.flexbox {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   .nav-text {
@@ -496,16 +504,6 @@ section.subscribe {
 
   .hamburger {
     display: none;
-  }
-
-  .bottom {
-    align-self: center;
-  }
-
-  /* Shop navigation with CTA's */
-  .container-shopnav {
-    flex-direction: row;
-    margin-bottom: 0px;
   }
 
   /* SECTION - waterproof */
