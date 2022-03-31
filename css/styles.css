@@ -171,6 +171,10 @@ figure figcaption {
   padding: 5px;
 }
 
+.hamburger {
+  flex-grow: 0;
+}
+
 .hamburger img {
   width: 50%;
 }
@@ -242,38 +246,32 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 48vh;
-  max-height: 88vh;
-  margin-bottom: 45px;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr 0.5fr;
+  grid-auto-rows: minmax(100px, auto);
+  justify-items: center;
+  align-items: center;
+}
+
 .item-shop-men {
-  background-image: url(../images/home-man.jpg);
-  background-size: cover;
-  background-position-x: left;
-  background-position-y: bottom;
+  background: url(../images/home-man.jpg) left bottom/cover no-repeat; 
   width: 100%;
   min-height: 48vh;
   max-height: 100vh;
 }
 
 .item-shop-women {
-  background-image: url(../images/home-women.jpg);
-  background-size: cover;
-  background-position-x: left;
-  background-position-y: center;
+  background: url(../images/home-women.jpg) left center/cover no-repeat; 
 }
 
-.wrapper {
-  display: inline-grid;
-  grid-template-columns: 0.5fr 2.5fr 0.5fr;
-  grid-auto-rows: minmax(100px, auto);
-  justify-items: center;
-  align-items: center;
-}
+
 .bottom {
   grid-column: 2;
   grid-row: 3;
-  align-self: flex-start;
+  align-self: center;
 }
 
 /* SECTION - waterproof */
@@ -464,11 +462,7 @@ section.subscribe {
   /* Shop navigation with CTA's */
   .container-shopnav {
     flex-direction: row;
-    margin-bottom: 0px;
-  }
-
-  .bottom {
-    align-self: center;
+    margin-bottom: 0;
   }
 
   footer {
@@ -480,10 +474,6 @@ section.subscribe {
   figure {
     margin: 0;
     align-self: flex-end;
-  }
-
-  .hamburger {
-    flex-grow: 0;
   }
 }
 
