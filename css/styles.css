@@ -56,6 +56,8 @@ h3 {
 
 a {
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #11172d;
 }
 
 button {
@@ -68,7 +70,6 @@ button {
   color: #f5fafc;
   border-radius: 30px;
   font-size: 1.125em;
-  text-decoration: none;
   text-transform: uppercase;
   padding: 15px 40px;
   box-sizing: border-box;
@@ -114,7 +115,6 @@ button {
 header a,
 footer a {
   color: #f5fafc;
-  text-decoration: none;
   padding: 0;
   margin: 0;
 }
@@ -325,14 +325,11 @@ section.bestsellers {
   grid-row-start: 1;
   grid-row-end: span 2;
   z-index: 1;
-}
-
-.product-img img {
   width: 250px;
   transition: transform 0.3s;
 }
 
-.product-img img:hover {
+.product-img:hover {
   transform: scale(1.02);
 }
 
@@ -340,7 +337,6 @@ section.bestsellers {
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row: 3;
-  text-decoration: none;
   color: #11172d;
 }
 
