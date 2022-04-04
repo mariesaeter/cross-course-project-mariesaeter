@@ -3,10 +3,19 @@ html {
   box-sizing: border-box;
 }
 
+/* CSS variables */
+:root {
+  --dark-blue: #11172d;
+  --light-blue: #f5fafc;
+  --light-grey: #e9eef1;
+  --orange: #fc8118;
+  --bright-blue: #0067d6; 
+}
+
 header,
 footer {
-  background-color: #11172d;
-  color: #f5fafc;
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
   display: flex;
   align-items: center;
   width: 100%;
@@ -26,7 +35,8 @@ body {
   font-family: "Quattrocento Sans", Verdana, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5fafc;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
   width: 100%;
   box-sizing: border-box;
 }
@@ -36,6 +46,7 @@ h1 {
 }
 h2 {
   font-size: 1.5em;
+  text-align: center;
 }
 
 h3 {
@@ -57,7 +68,7 @@ h3 {
 a {
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  color: #11172d;
+  color: var(--dark-blue);
 }
 
 button {
@@ -66,8 +77,8 @@ button {
 
 /* CTA and buttons*/
 .cta {
-  background-color: #fc8118;
-  color: #f5fafc;
+  background-color: var(--orange);
+  color: var(--light-blue);
   border-radius: 30px;
   font-size: 1.125em;
   text-transform: uppercase;
@@ -77,30 +88,30 @@ button {
 }
 
 .cta:hover {
-  background-color: #f5fafc;
-  color: #fc8118;
-  border: 3px solid #fc8118;
+  background-color: var(--light-blue);
+  color: var(--orange);
+  border: 3px solid var(--orange);
   box-sizing: border-box;
 }
 
 .cta-light {
   background-color: transparent;
   border: 2px solid;
-  border-color: #f5fafc;
+  border-color: var(--light-blue);
   font-size: 1em;
   margin: 20px 0;
   display: inline-block;
 }
 
 .cta-light:hover {
-  background-color: #f5fafc;
-  color: #11172d;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
   border: none;
 }
 
 .dark-button {
-  background-color: #11172d;
-  color: #f5fafc;
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
   border: none;
   padding: 15px 0;
   border-radius: 30px;
@@ -114,7 +125,7 @@ button {
 /* HEADER */
 header a,
 footer a {
-  color: #f5fafc;
+  color: var(--light-blue);
   padding: 0;
   margin: 0;
 }
@@ -126,7 +137,7 @@ header a {
 
 header a:hover,
 footer a:hover {
-  color: #fc8118;
+  color: var(--orange);
 }
 
 nav ul,
@@ -276,8 +287,8 @@ footer {
 
 /* SECTION - waterproof */
 .waterproof {
-  background-color: #11172d;
-  color: #f5fafc;
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
   text-align: center;
   padding: 30px 16px;
 }
@@ -296,7 +307,7 @@ footer {
 
 /* SECTION - Best sellers */
 section.bestsellers {
-  width: 75%;
+  width: 100%;
   margin: 30px auto;
 }
 
@@ -305,8 +316,8 @@ section.bestsellers {
 }
 
 .container-best-sellers {
-  display: flex;
-  width: 100%;
+  display: grid;
+  justify-content: center;
   overflow-x: auto;
   box-sizing: border-box;
   gap: 25px;
@@ -329,15 +340,15 @@ section.bestsellers {
   transition: transform 0.3s;
 }
 
-.product-img:hover {
+.product-card:hover {
   transform: scale(1.02);
+  background-color: var(--light-grey);
 }
 
 .product-title {
   grid-column-start: 1;
   grid-column-end: span 3;
   grid-row: 3;
-  color: #11172d;
 }
 
 .product-description {
@@ -381,15 +392,14 @@ section.bestsellers {
   padding-bottom: 7px;
   border-radius: 0 25px 25px 0;
   width: 64px;
-  background-color: #fc8118;
-  color: #f5fafc;
+  background-color: var(--orange);
+  color: var(--light-blue);
   font-weight: bold;
 }
 
 /* SECTION - Get updates */
 section.subscribe {
-  background-color: #e9eef1;
-  color: #11172d;
+  background-color: var(--light-grey);
   text-align: center;
   padding: 30px 16px;
 }
@@ -403,10 +413,9 @@ section.subscribe {
 
 .subscribe form {
   display: inline-flex;
-  width: 350px;
+  min-width: 75%;
   flex-direction: column;
   row-gap: 10px;
-  justify-items: center;
 }
 
 .subscribe label {
@@ -418,12 +427,12 @@ section.subscribe {
   padding: 15px 20px;
   box-sizing: border-box;
   border: none;
-  background-color: #f5fafc;
+  background-color: var(--light-blue);
   border-radius: 5px;
 }
 
 .subscribe input[type="email"]:focus {
-  outline: 2px solid #0067d6;
+  outline: 2px solid var(--bright-blue);
 }
 
 /* MEDIA QUERIES */
@@ -459,6 +468,15 @@ section.subscribe {
   .container-shopnav {
     flex-direction: row;
     margin-bottom: 0;
+  }
+
+  .container-best-sellers {
+    display:flex;
+  }
+
+  .subscribe form {
+    min-width: 0%;
+    width: 350px;
   }
 
   footer {
