@@ -155,7 +155,7 @@ header.flexbox {
   height: 110px;
   box-sizing: border-box;
   gap: 25px;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .logo-home {
@@ -173,10 +173,6 @@ figure {
   flex-grow: 1;
 }
 
-figure img {
-  width: 40%;
-}
-
 figure figcaption {
   font-size: smaller;
   padding: 5px;
@@ -184,20 +180,41 @@ figure figcaption {
 
 .hamburger {
   flex-grow: 0;
+  z-index: 999;
 }
 
-.hamburger img {
-  width: 50%;
+.hamburger img, figure img {
+  width: 24px;
+}
+.nav-text, .icon {
+  display: none;
+}
+
+nav {
+  flex-grow: 1;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-text {
+  background-color:#e9eef1;
+  padding: 50px;
+}
+.nav-text a {
+  color: #11172d;
 }
 
 #hamburger-menu {
   display: none;
 }
-.nav-text {
-  display: none;
-}
-.icon {
-  display: none;
+#hamburger-menu:checked ~ .nav-text{
+  display: block;
+  z-index: 800;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 footer {
@@ -499,7 +516,14 @@ section.subscribe {
   }
 
   .nav-text {
+    order: -1;
     display: flex;
+    padding: 0;
+    background: transparent;
+  }
+
+  .nav-text a {
+    color: #f5fafc;
   }
 
   figure {
