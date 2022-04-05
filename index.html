@@ -22,17 +22,28 @@
     
     <nav class="flexbox">
       
-      <ul>
-        <li class="icon"><a href="/">
+      <ul id="icons">
+        <li>
           <figure>
-          <img src="images/header&footer/favorite.png" alt="favorite heart">
-          <figcaption>Favorite</figcaption>
+          <img src="images/header&footer/search.png" alt="search">
+          <figcaption>Search</figcaption>
           </figure>
-        </a></li>
+            <form class="search-toggle">
+              <input type="text" placeholder="type search"/>
+              <button type="submit"><img src="images/header&footer/search-grey.png" alt="search"></button>
+            </form>
+            
+        </li>
         <li><a href="/">
           <figure>
           <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
           <figcaption>Basket</figcaption>
+          </figure>
+        </a></li>
+        <li class="icon"><a href="/">
+          <figure>
+          <img src="images/header&footer/favorite.png" alt="favorite heart">
+          <figcaption>Favorite</figcaption>
           </figure>
         </a></li>
         <li class="icon"><a href="/">
@@ -43,7 +54,7 @@
         </a></li>
       </ul>
       <label for="hamburger-menu" class="hamburger"><img src="images/header&footer/menu.png" alt="hamburger menu"></label>
-    <input type="checkbox" id="hamburger-menu">
+      <input type="checkbox" id="hamburger-menu">
       <ul class="nav-text">
         <li><a href="men.html">Men</a></li>
         <li><a href="men.html">Women</a></li>
