@@ -19,21 +19,8 @@
       <a class="logo-home"href="index.html">
       <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
     </a>
-    
     <nav class="flexbox">
-      
       <ul id="icons">
-        <li>
-          <figure>
-          <img src="images/header&footer/search.png" alt="search">
-          <figcaption>Search</figcaption>
-          </figure>
-            <form class="search-toggle">
-              <input type="text" placeholder="type search"/>
-              <button type="submit"><img src="images/header&footer/search-grey.png" alt="search"></button>
-            </form>
-            
-        </li>
         <li><a href="/">
           <figure>
           <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
@@ -53,18 +40,24 @@
           </figure>
         </a></li>
       </ul>
-      <label for="hamburger-menu" class="hamburger"><img src="images/header&footer/menu.png" alt="hamburger menu"></label>
       <input type="checkbox" id="hamburger-menu">
+      <label for="hamburger-menu" class="hamburger"><img src="images/header&footer/menu.png" alt="hamburger menu"></label>
+      <label for="hamburger-menu" class="close"><img src="images/header&footer/close.png" alt="close"></label>
       <ul class="nav-text">
         <li><a href="men.html">Men</a></li>
         <li><a href="men.html">Women</a></li>
         <li><a href="men.html">Unisex</a></li>
         <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
+    </ul>
     
+    </nav>
     </header>
     <main>
+      <section class="search-container"><form class="search">
+        <input type="text" placeholder="Search"/>
+        <button type="submit"><img src="images/header&footer/search-grey.png" alt="search"></button>
+      </form>
+    </section>
       <section class="container-shopnav">
         <div class="item-shop-men wrapper">
           <a class="cta bottom" href="men.html">Shop Men</a>
@@ -82,38 +75,67 @@
       </section>
       <section class="bestsellers">
         <h2>Best Sellers</h2>
-        <div class="container-best-sellers">
-          <a class="product-card" href="/">
-          <img class="product-img" src="images/products/red.jpg" alt="Man with Red Rain jacket">
-          <h3 class="product-title">Coastal Rain 02</h3>
-          <p class="product-description">All-weather jacket</p>
-          <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
-          <p class="product-price">1 999 NOK</p>
-          </a>
-        <a class="product-card" href="/">
-          <img class="product-img" src="images/products/red.jpg" alt="Man with Red Rain jacket">
-          <h3 class="product-title">Coastal Rain 02</h3>
-          <p class="product-sale">-15%</p>
-          <p class="product-description">All-weather jacket</p>
-          <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
-          <p class="product-price">2 125 NOK</p>
-          <p class="product-old-price">2 500 NOK</p>
-        </a>
-        <a class="product-card" href="/">
-          <img class="product-img" src="images/products/red.jpg" alt="Man with Red Rain jacket">
-          <h3 class="product-title">Coastal Rain 02</h3>
-          <p class="product-description">All-weather jacket</p>
-          <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
-          <p class="product-price">1 999 NOK</p>
-          </a>
-        <a class="product-card" href="/">
-          <img class="product-img" src="images/products/red.jpg" alt="Man with Red Rain jacket">
-          <h3 class="product-title">Coastal Rain 02</h3>
-          <p class="product-description">All-weather jacket</p>
-          <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
-          <p class="product-price">1 999 NOK</p>
-          </a>
-      </div>
+        <section class="product-section"> 
+          <div class="product-card">
+              <div class="product-image">
+                  <a href="/"><img src="/images/products/red.jpg"></a>
+              </div>
+              <div class="product-info">
+                  <div class="product-name">
+                  <a href="/"><h3>Coastal Rain 02</h3>
+                  <h4>All-weather jacket</h4> 
+                  </a>
+                  <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
+                  </div>
+                  <div class="product-name">
+                  <p>2 125 NOK</p>
+                  <span>2 500 NOK</span>
+                  </div>
+              </div>
+              <div class="sale">-15%</div>
+          </div>
+          <div class="product-card">
+              <div class="product-image">
+                  <a href="/"><img src="/images/products/red.jpg"></a>
+              </div>
+              <div class="product-info">
+                  <div class="product-name">
+                  <a href="/"><h3>Coastal Rain 02</h3>
+                  <h4>All-weather jacket</h4> 
+                  </a>
+                  <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
+                  </div>
+                  <p>1 999 NOK</p>
+              </div>
+          </div>
+          <div class="product-card">
+              <div class="product-image">
+                  <a href="/"><img src="/images/products/red.jpg"></a>
+              </div>
+              <div class="product-info">
+                  <div class="product-name">
+                  <a href="/"><h3>Coastal Rain 02</h3>
+                  <h4>All-weather jacket</h4> 
+                  </a>
+                  <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
+                  </div>
+                  <p>1 999 NOK</p>
+              </div>
+          </div>
+          <div class="product-card">
+              <div class="product-image">
+                  <a href="/"><img src="/images/products/red.jpg"></a>
+              </div>
+              <div class="product-info">
+                  <div class="product-name">
+                  <a href="/"><h3>Coastal Rain 02</h3>
+                  <h4>All-weather jacket</h4> 
+                  </a>
+                  <img class="product-fav" src="images/favorite-dark.png" alt="favorite heart">
+                  </div>
+                  <p>1 999 NOK</p>
+              </div>
+          </div>
       </section>
       <section class="subscribe">
         <h2>Get updates</h2>

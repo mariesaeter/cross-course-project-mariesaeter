@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
 }
 
+
 /* CSS variables */
 :root {
   --dark-blue: #11172d;
@@ -56,12 +57,13 @@ h3 {
 h1,
 h2 {
   font-family: "Quattrocento", serif;
-  margin: 0;
 }
 
 p,
+h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
 }
 
@@ -121,6 +123,25 @@ button {
 .dark-button:hover {
   background-color: #1b2547;
 }
+/*Breadcrumbs*/
+
+.breadcrumbs a {
+  display: inline-flex;
+  margin: 10px;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.current-breadcrumbs {
+  font-weight: bold;
+}
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 15px;
+}
 
 /* HEADER */
 header a,
@@ -136,8 +157,13 @@ header a {
 }
 
 header a:hover,
-footer a:hover {
+footer a:hover,
+body.active li.active a:hover {
   color: var(--orange);
+}
+
+body.active li.active a {
+  color: var(--bright-blue);
 }
 
 nav ul,
@@ -179,13 +205,13 @@ figure figcaption {
   text-transform: uppercase;
 }
 
-.hamburger {
+.hamburger, .close {
   flex-grow: 0;
   z-index: 990;
   margin-left: 5px;
 }
 
-.hamburger img, nav img {
+.hamburger img, nav img, .close img {
   width: 24px;
 }
 .nav-text, .icon {
@@ -200,39 +226,6 @@ nav, #icons{
   align-items: center;
 }
 
-/* Search */
-
-.search-toggle {
-  position: absolute;
-}
-
-.search-toggle input[type="text"] {
-  padding: 15px 20px 16px 20px;
-  box-sizing: border-box;
-  border: none;
-  background-color: var(--light-blue);
-  border-radius: 50px 0 0 50px;
-  width: 80%;
-}
-
-.search-toggle input[type="text"]:focus {
-  outline: 2px solid var(--bright-blue);
-}
-
-.search-toggle button {
-  width: 20%;
-  position: relative;
-  float: right;
-  background-color: var(--light-blue);
-  border: none;
-  padding: 10px;
-  border-radius: 0 50px 50px 0;
-}
-
-.search-toggle button:hover {
-  background-color: var(--light-grey);
-}
-
 .nav-text {
   background-color: var(--light-grey);
   padding: 50px;
@@ -243,7 +236,11 @@ nav, #icons{
   line-height: 3;
 }
 
-#hamburger-menu {
+#hamburger-menu, #close-menu {
+  display: none;
+}
+
+.close {
   display: none;
 }
 
@@ -253,6 +250,57 @@ nav, #icons{
   position: absolute;
   top: 0;
   right: 0;
+}
+
+#hamburger-menu:checked ~ .close {
+  display: block;
+}
+
+#hamburger-menu:checked + .hamburger {
+  display: none;
+}
+
+/* Search */
+
+.search-container {
+  background-color: rgba(17,23,45, .2);
+  padding: 10px 20px;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.search img {
+  width: 24px;
+}
+
+.search input[type="text"] {
+  padding: 15px 20px 16px 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--light-blue);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.search input[type="text"]:focus {
+  outline: 2px solid var(--bright-blue);
+}
+
+.search button {
+  width: 50px;
+  background-color: var(--light-blue);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+}
+
+.search button:hover {
+  background-color: var(--light-grey);
 }
 
 footer {
@@ -362,12 +410,11 @@ footer {
 
 /* SECTION - Best sellers */
 section.bestsellers {
-  width: 100%;
   margin: 30px auto;
 }
 
 .bestsellers h2 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .container-best-sellers {
@@ -376,80 +423,6 @@ section.bestsellers {
   overflow-x: auto;
   box-sizing: border-box;
   gap: 25px;
-}
-
-.product-card {
-  display: grid;
-  grid-template-columns: 50px 75px 75px 50px;
-  width: 250px;
-  grid-template-rows: 50px auto;
-  grid-row-gap: 5px;
-}
-
-.product-img {
-  grid-column: 1;
-  grid-row-start: 1;
-  grid-row-end: span 2;
-  z-index: 1;
-  width: 250px;
-  transition: transform 0.3s;
-}
-
-.product-card:hover {
-  transform: scale(1.02);
-  background-color: var(--light-grey);
-}
-
-.product-title {
-  grid-column-start: 1;
-  grid-column-end: span 3;
-  grid-row: 3;
-}
-
-.product-description {
-  grid-column-start: 1;
-  grid-column-end: span 3;
-  grid-row: 4;
-}
-
-.product-fav {
-  width: 50%;
-  justify-self: center;
-  align-self: center;
-  grid-column: 4;
-  grid-row: 3;
-}
-
-.product-price {
-  grid-column-start: 1;
-  grid-column-end: span 2;
-  grid-row: 7;
-  font-weight: bold;
-  font-size: 1.125em;
-}
-
-.product-old-price {
-  grid-column-start: 3;
-  grid-column-end: span 2;
-  grid-row: 7;
-  font-size: 1.125em;
-  text-decoration: line-through;
-  justify-self: end;
-}
-
-.product-sale {
-  grid-column: 1;
-  grid-row-start: 1;
-  z-index: 2;
-  align-self: center;
-  padding-left: 15px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  border-radius: 0 25px 25px 0;
-  width: 64px;
-  background-color: var(--orange);
-  color: var(--light-blue);
-  font-weight: bold;
 }
 
 /* SECTION - Get updates */
@@ -490,6 +463,73 @@ section.subscribe {
   outline: 2px solid var(--bright-blue);
 }
 
+
+/* MEN - JACKET LIST */
+.sort {
+  text-align: center;
+}
+
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.product-card {
+  flex-grow: 1;
+  flex-basis: 40%;
+  margin: 2%;
+  position: relative;
+  transition: transform 0.3s;
+  display:flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  background-color: var(--light-grey);
+}
+
+.product-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-name h4 {
+  margin-bottom: 20px;
+}
+.product-image img {
+  max-width: 100%;
+}
+
+.product-fav {
+  width: 24px;
+  height: 24px;
+}
+
+.product-fav:hover {
+  background-image: url(/images/favorite-filled.png);
+  background-size: 24px;
+  background-repeat:no-repeat;
+}
+
+.product-card .sale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  padding: 7px 15px;
+  border-radius: 0 25px 25px 0;
+  background-color: var(--orange);
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+.product-name span {
+  text-decoration: line-through;
+}
+
+
 /* MEDIA QUERIES */
 @media (min-width: 648px) {
   nav {
@@ -525,10 +565,6 @@ section.subscribe {
     margin-bottom: 0;
   }
 
-  .container-best-sellers {
-    display:flex;
-  }
-
   .subscribe form {
     min-width: 0%;
     width: 350px;
@@ -537,13 +573,29 @@ section.subscribe {
   footer {
     padding: 30px 25%;
   }
+
+  /* MEN - JACKET LIST */
+  .product-section {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .product-card {
+    flex-basis: 29%;
+  }
 }
+ 
 
 @media (min-width: 648px) and (max-width: 992px) {
   figure {
     margin: 0;
     align-self: flex-end;
   }
+
+  /*MEN - JACKET LIST */
+  .product-section .product-card:first-child,
+  .product-section .product-card:nth-child(2) {
+  flex: 2 40%;
+}
 }
 
 @media (min-width: 992px) {
@@ -569,9 +621,35 @@ section.subscribe {
     display: none;
   }
 
+  body.active li.active a {
+    background-color: var(--light-blue);
+    padding: 46px 20px;
+  }
+
   /* SECTION - waterproof */
   .waterproof p {
     padding-left: 30%;
     padding-right: 30%;
+  }
+
+  /* MEN - JACKET LIST */
+  .product-card {
+    flex-basis: 20%;
+  }
+
+  .container-product-filter {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .search {
+    width: 50%;
+  }
+
+  /*MEN - JACKET LIST */
+  .page-heading {
+    text-align: left;
+    margin-left: 100px;
   }
 }
