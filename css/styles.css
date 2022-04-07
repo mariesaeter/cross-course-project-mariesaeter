@@ -209,6 +209,7 @@ figure figcaption {
   flex-grow: 0;
   z-index: 990;
   margin-left: 5px;
+  cursor: pointer;
 }
 
 .hamburger img, nav img, .close img {
@@ -468,11 +469,53 @@ section.subscribe {
 .sort {
   text-align: center;
 }
+.container-product-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+/* --- filter --- */
+
+button.filter {
+  max-width: fit-content;
+  position: relative;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  padding: 15px 40px;
+}
+
+#filter-box {
+  width: 100%;
+  display: none;
+  background-color: var(--light-grey);
+  position: absolute;
+  top: 70px;
+  z-index: 60;
+
+}
+
+#filter-box ul {
+  list-style: none;
+  line-height: 1.5em;
+}
+
+#filter-box h5 {
+  margin-left: 30px;
+}
+
+
+.filter:focus ~#filter-box {
+  display: block;
+  
+}
+
+/* --- products --- */
 
 .product-section {
   display: flex;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 0 15px 15px 15px;
 }
 
 .product-card {
@@ -484,6 +527,11 @@ section.subscribe {
   display:flex;
   flex-direction: column;
 }
+
+.product-section .product-card:first-child,
+.product-section .product-card:nth-child(2) {
+    margin-top: 0;
+  }
 
 .product-card:hover {
   transform: scale(1.02);
@@ -576,12 +624,16 @@ section.subscribe {
 
   /* MEN - JACKET LIST */
   .product-section {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
   .product-card {
     flex-basis: 29%;
-  }
+  }   
+  .product-section .product-card:first-child,
+  .product-section .product-card:nth-child(2) {
+  flex: 2 40%;
+}
 }
  
 
@@ -592,10 +644,7 @@ section.subscribe {
   }
 
   /*MEN - JACKET LIST */
-  .product-section .product-card:first-child,
-  .product-section .product-card:nth-child(2) {
-  flex: 2 40%;
-}
+
 }
 
 @media (min-width: 992px) {
@@ -631,25 +680,47 @@ section.subscribe {
     padding-left: 30%;
     padding-right: 30%;
   }
-
-  /* MEN - JACKET LIST */
-  .product-card {
-    flex-basis: 20%;
+  
+  .search {
+    width: 50%;
   }
+
+  @media (min-width: 1270px) {
 
   .container-product-filter {
     display: flex;
-    width: 90%;
+    flex-direction: row;
+    width: 78%;
     margin: 0 auto;
-  }
-
-  .search {
-    width: 50%;
+    align-items: flex-start;
   }
 
   /*MEN - JACKET LIST */
   .page-heading {
     text-align: left;
-    margin-left: 100px;
+    margin-left: 11%;
+  }
+
+  button.filter {
+   display: none;
+  }
+  .container-product-filter .product-card {
+    flex-basis: 21%;
+  }
+
+  .product-section .product-card:first-child,
+  .product-section .product-card:nth-child(2) {
+  flex: 2 21%;
+}
+.product-section .product-card:nth-child(3),
+.product-section .product-card:nth-child(4) {
+    margin-top: 0;
+  }
+
+  #filter-box {
+    width: 200px; 
+    display: block;
+    top: 0px;
+    position: static;
   }
 }
