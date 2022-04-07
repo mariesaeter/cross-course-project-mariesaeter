@@ -528,8 +528,8 @@ button.filter {
   flex-direction: column;
 }
 
-.product-section .product-card:first-child,
-.product-section .product-card:nth-child(2) {
+.container-product-filter .product-section .product-card:first-child,
+.container-product-filter .product-section .product-card:nth-child(2) {
     margin-top: 0;
   }
 
@@ -674,6 +674,9 @@ button.filter {
     background-color: var(--light-blue);
     padding: 46px 20px;
   }
+  .bestsellers .product-section .product-card {
+    flex-basis: 21%;
+  }
 
   /* SECTION - waterproof */
   .waterproof p {
@@ -708,12 +711,12 @@ button.filter {
     flex-basis: 21%;
   }
 
-  .product-section .product-card:first-child,
-  .product-section .product-card:nth-child(2) {
+.container-product-filter .product-section .product-card:first-child,
+.container-product-filter .product-section .product-card:nth-child(2) {
   flex: 2 21%;
 }
-.product-section .product-card:nth-child(3),
-.product-section .product-card:nth-child(4) {
+.container-product-filter .product-section .product-card:nth-child(3),
+.container-product-filter .product-section .product-card:nth-child(4) {
     margin-top: 0;
   }
 
