@@ -47,7 +47,6 @@ h1 {
 }
 h2 {
   font-size: 1.5em;
-  text-align: center;
 }
 
 h3 {
@@ -632,27 +631,6 @@ width: 100%;
 position: relative;
 top: -30%;
 }
-  /*
-  background-image: url(/images/products/red.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 53;
-}*/
-
-#slide2 {
-  background-image: url(/images/products/red2.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 53;
-}
-
-#slide3 {
-  background-image: url(/images/products/red3.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 53;
-
-}
 
 .slide-prev, 
 .slide-next {
@@ -674,6 +652,24 @@ top: -30%;
 .slide-next {
   right: 0;
 
+}
+
+/* info section */
+
+.color .chosen {
+  background-color: var(--light-grey);
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
+
+.radio-colors ul, .radio-colors ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-colors ul {
+  display: flex;
 }
 
 /* MEDIA QUERIES */
