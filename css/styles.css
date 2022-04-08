@@ -1,5 +1,5 @@
 /* CSS grid*/
-html {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -86,6 +86,7 @@ button {
   padding: 15px 40px;
   box-sizing: border-box;
   font-weight: bold;
+  border: 3px solid transparent;
 }
 
 .cta:hover {
@@ -712,10 +713,10 @@ button.filter {
   background-color: #5B7E0E;
 }
 
-.radio-colors li input[type="radio"]:checked + label:after {
+.radio-colors li input[type="radio"]:checked + label::after {
 border-radius: 0;
-width: 35px;
-height: 35px;
+width: 40px;
+height: 40px;
 background: transparent;
 border: 3px solid #0067d6;
 content: "";
@@ -728,6 +729,13 @@ position: absolute;
   justify-content: center;
 }
 
+.radio-sizes {
+  width: 100%;
+  text-align: center;
+}
+.radio-sizes ul {
+  margin: 20px 0;
+}
 .radio-sizes label {
   color: #0067d6;
   font-weight: bold;
@@ -735,92 +743,116 @@ position: absolute;
 }
 
 
-.radio-sizes li label:before {
-  width: 70px;
-  height: 25px;
+.radio-sizes li label::before {
   border: 3px solid var(--bright-blue);
   border-radius: 25px;
   position: relative;
+  padding: 10px;
+  width: 70px;
+  margin: 0 10px;
 }
 
-.radio-sizes li input[type="radio"]:checked + label:after {
-  border: none;
+.radio-sizes li input[type="radio"]:checked + label::before {
+  border: 3px solid transparent;
   background-color: var(--bright-blue);
-  width: 76px;
-  height: 31px;
   border-radius: 25px;
   color: var(--light-blue);
-  position: absolute;
+  position: relative;
   text-align: center;
-  padding-top: 15px;
 }
 
-.radio-sizes label:before {
+.radio-sizes label::before {
   text-align: center;
-  padding-top: 15px;
 }
 
-.radio-sizes label#size-s:before {
+.radio-sizes label#size-s::before {
   content: "s";
 }
-.radio-sizes input[type="radio"]:checked + label#size-s:after {
+.radio-sizes input[type="radio"]:checked + label#size-s::before {
   content: "s";
 }
 
-.radio-sizes label#size-m:before {
+.radio-sizes label#size-m::before {
   content: "m";
 }
-.radio-sizes input[type="radio"]:checked + label#size-m:after {
+.radio-sizes input[type="radio"]:checked + label#size-m::before {
   content: "m";
 }
 
-.radio-sizes label#size-xl:before {
+.radio-sizes label#size-xl::before {
   content: "xl";
 }
-.radio-sizes input[type="radio"]:checked + label#size-xl:after {
+.radio-sizes input[type="radio"]:checked + label#size-xl::before {
   content: "xl";
 }
 
-.radio-sizes label.disabled:before,
-.radio-sizes input[type="radio"]:checked + label.disabled:after {
+.radio-sizes label.disabled::before,
+.radio-sizes input[type="radio"]:checked + label.disabled::before {
   border: 3px solid var(--light-grey);
   color: rgba(17,23,45, .2);
   background-color: transparent;
 }
 
-.radio-sizes label.disabled#size-xs:before,
-.radio-sizes input[type="radio"]:checked + label.disabled#size-xs:after {
+.radio-sizes label.disabled#size-xs::before,
+.radio-sizes input[type="radio"]:checked + label.disabled#size-xs::before {
   content: "xs";
 }
 
-.radio-sizes label.disabled#size-l:before,
-.radio-sizes input[type="radio"]:checked + label.disabled#size-l:after {
+.radio-sizes label.disabled#size-l::before,
+.radio-sizes input[type="radio"]:checked + label.disabled#size-l::before {
   content: "l";
 }
 
-.radio-sizes label.disabled#size-xxl:before,
-.radio-sizes input[type="radio"]:checked + label.disabled#size-xxl:after {
+.radio-sizes label.disabled#size-xxl::before,
+.radio-sizes input[type="radio"]:checked + label.disabled#size-xxl::before {
   content: "xxl";
 }
 
 .add-to-cart {
   text-align: center;
-  width: 100%;
-  margin: 50px 0;
+  width: 90%;
+  margin: 50px auto;
 }
 .cta-add-to-cart {
   padding: 15px 30%;
+  width: 100%;
+  display: inline-block;
 }
+
+.cta-add-to-cart::before {
+  content: "Add to cart";
+}
+
+#add-to-cart:checked ~ .cta-add-to-cart {
+  background-color: #5B7E0E;
+  width: 100%;
+  display: inline-block;
+}
+#add-to-cart:checked ~ .cta-add-to-cart::before {
+  content: "Added";
+}
+#add-to-cart:checked ~ .cta-add-to-cart:hover {
+  border: 3px solid transparent;
+  color: var(--light-blue);
+}
+
 
 .product-description {
   margin-bottom: 10px;
+  width: 100%;
 }
 
-.product-description h2 {
+#h2-description, #h2-size {
   width: 100%;
   background-color: var(--light-grey);
   padding: 5px 15px;
   box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+#h2-description:hover, #h2-size:hover {
+  background-color: rgba(17,23,45, .2)
 }
 
 .product-description p {
@@ -841,6 +873,34 @@ position: absolute;
 #size-guide:checked ~ #size-info {
   display: block;
 }
+
+#description:checked ~ #h2-description {
+  background: var(--dark-blue);
+  color: var(--light-blue);
+}
+
+#size-guide:checked ~ #h2-size {
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+}
+
+#h2-description h2::after, #h2-size h2::after {
+  content: "";
+  display: inline-block;
+  background-image: url(/images/chevron-down.png);
+  height: 24px;
+  width: 24px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+#description:checked ~ #h2-description h2::after, #size-guide:checked ~ #h2-size h2::after {
+  background-image: url(/images/chevron-up.png);
+}
+
 
 /* MEDIA QUERIES */
 @media (min-width: 648px) {
