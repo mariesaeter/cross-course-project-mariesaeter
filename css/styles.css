@@ -10,7 +10,7 @@ html {
   --light-blue: #f5fafc;
   --light-grey: #e9eef1;
   --orange: #fc8118;
-  --bright-blue: #0067d6; 
+  --bright-blue: #0067d6;
 }
 
 header,
@@ -236,7 +236,9 @@ nav, #icons{
   line-height: 3;
 }
 
-#hamburger-menu, #close-menu {
+#hamburger-menu, 
+#close-menu,
+#add-to-cart {
   display: none;
 }
 
@@ -587,7 +589,7 @@ button.filter {
 .slideshow {
   position: relative;
   width: 100%;
-  height: 400px;
+  height:450px;
 }
 
 .slideshow-view {
@@ -597,7 +599,7 @@ button.filter {
   bottom: 0;
   left: 0;
   display: flex;
-  overflow-x: scroll;
+  overflow-x:scroll;
   scroll-behavior: smooth;
   scroll-snap-type: mandatory;
 }
@@ -621,15 +623,18 @@ button.filter {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   scroll-snap-align: center;
+  
 }
 
 
-.slideshow .slide-img {
-width: 100%;
-position: relative;
-top: -30%;
+.slide-img-red3, .slide-img {
+  position: relative;
+  width: 100%;
+}
+
+.slide-img {
+  top: -30%;
 }
 
 .slide-prev, 
@@ -655,21 +660,186 @@ top: -30%;
 }
 
 /* info section */
+.jacket-name {
+  margin: 15px;
+}
+.color .chosen, 
+.size .chosen {
+  background-color: var(--light-grey);
+  padding: 5px 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
 
-.color .chosen {
+.jacket-info ul {
+  list-style: none;
+  margin-left: 25px;
+  padding: 0;
+}
+
+.jacket-info ul li {
+  display: inline-block;
+  position: relative;
+  padding: 0 5px;
+  margin: 5px;
+}
+
+.jacket-info li input[type="radio"] {
+  display: none;
+}
+
+.radio-colors li label:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-colors li label#color-swatch-red:before {
+  background-color: #C53C30;
+}
+
+.radio-colors li label#color-swatch-yellow:before {
+  background-color: #DBC200;
+}
+
+.radio-colors li label#color-swatch-blue:before {
+  background-color: #3C96B7;
+}
+
+.radio-colors li label#color-swatch-green:before {
+  background-color: #5B7E0E;
+}
+
+.radio-colors li input[type="radio"]:checked + label:after {
+border-radius: 0;
+width: 35px;
+height: 35px;
+background: transparent;
+border: 3px solid #0067d6;
+content: "";
+position: absolute;
+}
+
+.jacket-info li label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-sizes label {
+  color: #0067d6;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.radio-sizes li label:before {
+  width: 70px;
+  height: 25px;
+  border: 3px solid var(--bright-blue);
+  border-radius: 25px;
+  position: relative;
+}
+
+.radio-sizes li input[type="radio"]:checked + label:after {
+  border: none;
+  background-color: var(--bright-blue);
+  width: 76px;
+  height: 31px;
+  border-radius: 25px;
+  color: var(--light-blue);
+  position: absolute;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.radio-sizes label:before {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.radio-sizes label#size-s:before {
+  content: "s";
+}
+.radio-sizes input[type="radio"]:checked + label#size-s:after {
+  content: "s";
+}
+
+.radio-sizes label#size-m:before {
+  content: "m";
+}
+.radio-sizes input[type="radio"]:checked + label#size-m:after {
+  content: "m";
+}
+
+.radio-sizes label#size-xl:before {
+  content: "xl";
+}
+.radio-sizes input[type="radio"]:checked + label#size-xl:after {
+  content: "xl";
+}
+
+.radio-sizes label.disabled:before,
+.radio-sizes input[type="radio"]:checked + label.disabled:after {
+  border: 3px solid var(--light-grey);
+  color: rgba(17,23,45, .2);
+  background-color: transparent;
+}
+
+.radio-sizes label.disabled#size-xs:before,
+.radio-sizes input[type="radio"]:checked + label.disabled#size-xs:after {
+  content: "xs";
+}
+
+.radio-sizes label.disabled#size-l:before,
+.radio-sizes input[type="radio"]:checked + label.disabled#size-l:after {
+  content: "l";
+}
+
+.radio-sizes label.disabled#size-xxl:before,
+.radio-sizes input[type="radio"]:checked + label.disabled#size-xxl:after {
+  content: "xxl";
+}
+
+.add-to-cart {
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+}
+.cta-add-to-cart {
+  padding: 15px 30%;
+}
+
+.product-description {
+  margin-bottom: 10px;
+}
+
+.product-description h2 {
+  width: 100%;
   background-color: var(--light-grey);
   padding: 5px 15px;
   box-sizing: border-box;
 }
 
-.radio-colors ul, .radio-colors ul li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.product-description p {
+  padding: 5px 15px;
+  margin: 5px;
 }
 
-.radio-colors ul {
-  display: flex;
+#description,
+#description-info,
+#size-guide,
+#size-info {
+  display: none;
+}
+
+#description:checked ~ #description-info {
+  display: block;
+}
+#size-guide:checked ~ #size-info {
+  display: block;
 }
 
 /* MEDIA QUERIES */
@@ -700,6 +870,10 @@ top: -30%;
   .icon {
     display: inline;
   }
+  .breadcrumbs {
+    text-align: left;
+    margin-left: 25px;
+  }
 
   /* Shop navigation with CTA's */
   .container-shopnav {
@@ -728,6 +902,20 @@ top: -30%;
   .product-section .product-card:nth-child(2) {
   flex: 2 40%;
 }
+/* --- JACKET-SPECIFIC ---*/
+.container-jacket-specific {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.slideshow {
+  flex: 1;
+}
+
+.jacket-info {
+  flex: 2;
+}
+
 }
  
 
@@ -782,6 +970,8 @@ top: -30%;
     width: 50%;
   }
 
+
+
   @media (min-width: 1270px) {
 
   .container-product-filter {
@@ -793,10 +983,11 @@ top: -30%;
   }
 
   /*MEN - JACKET LIST */
-  .page-heading {
+  .page-heading h1{
     text-align: left;
     margin-left: 11%;
   }
+  
 
   button.filter {
    display: none;

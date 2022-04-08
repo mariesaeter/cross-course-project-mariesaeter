@@ -64,7 +64,8 @@
               <a href="jacket-specific.html" class="current-breadcrumbs">Coastal Rain 02</a>
           </div>
           </section>
-          <section class="slideshow">
+          <section class="container-jacket-specific">
+          <div class="slideshow">
               <div class="slide-wrapper">
                  <ol class="slideshow-view">
                      <li id="slide1" class="slideshow-slide">
@@ -88,7 +89,7 @@
                     </li>
                     <li id="slide3" class="slideshow-slide">
                         <div class="slideshow-snapper">
-                            <img src="/images/products/red3.jpg" alt="man with red jacket walking toward the coast" class="slide-img">
+                            <img src="/images/products/red3.jpg" alt="man with red jacket walking toward the coast" class="slide-img-red3">
                             <a href="#slide2" 
                             class="slide-prev"><img src="/images/products/chevron-left.png" alt="left arrow"></a> 
                             <a href="#slide1" 
@@ -97,7 +98,7 @@
                     </li>
                  </ol>
                 </div>
-          </section>
+            </div>
           <section class="jacket-info">
             <div class="jacket-name">
             <h1>Coastal Rain 02</h1>
@@ -105,35 +106,82 @@
             </div>
             <div class="color">
                 <div class="chosen">
-                    <p>Color</p>
+                    <p>Color:</p>
                 </div>
                 <div class="radio-colors">
                     <ul>
                         <li>
-                            <input type="radio" name="color" value="red">
-                            <label><span class="color-swatch" id="color-swatch-red"></span>red</label>
+                            <input type="radio" name="color" value="red" id="red">
+                            <label for="red" id="color-swatch-red"></label>
                         </li>
                         <li>
-                            <input type="radio" name="color" value="yellow">
-                            <label><span class="color-swatch" id="color-swatch-yellow"></span>yellow</label>
+                            <input type="radio" name="color" value="yellow" id="yellow">
+                            <label for="yellow" id="color-swatch-yellow"></label>
                         </li>
                         <li>
-                            <input type="radio" name="color" value="blue">
-                            <label><span class="color-swatch" id="color-swatch-blue"></span>blue</label>
+                            <input type="radio" name="color" value="blue" id="blue">
+                            <label for="blue" id="color-swatch-blue"></label>
                         </li>
                         <li>
-                            <input type="radio" name="color" value="green">
-                            <label><span class="color-swatch" id="color-swatch-green"></span>green</label>
+                            <input type="radio" name="color" value="green" id="green">
+                            <label for="green" id="color-swatch-green"></label>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="size">
-
+                <div class="chosen">
+                    <p>Size:</p>
+                </div>
+                <div class="radio-sizes">
+                    <ul>
+                        <li>
+                            <input type="radio" name="size" disabled value="xs" id="xs">
+                            <label for="xs" class="disabled" id="size-xs"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="size" value="s" id="s">
+                            <label for="s" id="size-s"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="size" value="m" id="m">
+                            <label for="m" id="size-m"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="size" disabled value="l" id="l">
+                            <label for="l" class="disabled" id="size-l"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="size" value="xl" id="xl">
+                            <label for="xl" id="size-xl"></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="size" disabled value="xxl" id="xxl">
+                            <label for="xxl" class="disabled" id="size-xxl"></label>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="add-to-cart">
-
+                <input type="checkbox" id="add-to-cart">
+                <label for="add-to-cart" class="cta cta-add-to-cart">Add to cart</label>
             </div>
+        </div>
+          
+              <div class="product-description">
+                
+                <input type="checkbox" id="description">
+                <label for="description" id="h2"><h2>Description</h2></label>
+                <p id="description-info"> Walking (also known as ambulation) is one of the main gaits of terrestrial 
+                      locomotion among legged animals. Walking is typically slower than running 
+                      and other gaits. </p>
+                  
+              </div>
+              <div class="product-description">
+                <input type="checkbox" id="size-guide">
+                <label for="size-guide" id="h2"><h2>Size guide and fitting</h2></label>
+                <p id="size-info">Here is a table of measurements for the different sizes.</p>
+              </div>
           </section>
     </main>
     <footer>
