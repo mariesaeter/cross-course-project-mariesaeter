@@ -952,8 +952,8 @@ position: absolute;
 }
 
 .about-light-section p {
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
   line-height: 1.5em;
   margin-top: 15px;
 }
@@ -1317,8 +1317,8 @@ position: absolute;
 
   /* SECTION - waterproof */
   .waterproof p {
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   
   .search {
