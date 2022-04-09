@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rainydays website - contact page</title>
+    <meta name="description" content="The contact page for Rainydays">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <!--Link to CSS file-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <header class="flexbox">
+        <a class="logo-home"href="index.html">
+        <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
+      </a>
+      <nav class="flexbox">
+        <ul id="icons">
+          <li><a href="checkout.html">
+            <figure>
+            <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
+            <figcaption>Basket</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/favorite.png" alt="favorite heart">
+            <figcaption>Favorite</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/login.png" alt="user">
+            <figcaption>Profile</figcaption>
+            </figure>
+          </a></li>
+        </ul>
+        <input type="checkbox" id="hamburger-menu">
+      <label for="hamburger-menu" class="hamburger"><img src="images/header&footer/menu.png" alt="hamburger menu"></label>
+      <label for="hamburger-menu" class="close"><img src="images/header&footer/close.png" alt="close"></label>
+        <ul class="nav-text">
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="unisex.html">Unisex</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      </header>   
+    <main>
+        <section class="search-container"><form class="search">
+            <input type="text" placeholder="Search"/>
+            <button type="submit"><img src="images/header&footer/search-grey.png" alt="search"></button>
+          </form>
+        </section>
+        <section class="page-heading">
+            <div class="breadcrumbs">
+              <a href="index.html">Home</a>
+              >
+              <a href="contact.html" class="current-breadcrumbs">Contact</a>
+          </div>
+          <h1>Contact</h1>
+        </section>
+          <section class="container-contact">
+          <div class="light-section contact-info">
+          <p>Do you have any questions about your order, 
+              this is the place where you can get in touch.</p>
+          <p>Before you send us a message, please look over the <a href="contact.html">frequently 
+              asked question</a> first.</p>
+            </div>
+        <section class="contact-form">
+                <h2>Send message</h2>
+                <p>Please select the category that is best suited for your question.</p>
+            <form>
+                <ul>
+                <li>
+                <select  name="question-theme" id="question-theme" required>
+                    <option value="shipping">Shipping</option>
+                    <option value="return">Return</option>
+                    <option value="other">Other</option>
+                </select>
+                    </li>
+                    <li>
+                    <label for="name"> Name (first and last)</label>
+                    <input type="text" name="name" id="name" required>
+                    </li>
+                    <li>
+                    <label for="emailaddress">Email address</label>
+                    <input type="email" name="emailaddress" id="emailaddress" required>
+                    </li>
+                    <li>
+                    <textarea id="message" name="message" rows="5" cols="30" placeholder="Write message here..."></textarea>
+                    </li>
+                    </ul>
+                <input type="submit" value="Send" class="cta">
+                </form>
+            </div>
+        </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact and Help</a></li>
+            </ul> 
+        </div>
+        <div class="footer-settings">
+            <ul>
+            <li><a href="/">Settings for cookies</a></li>
+            <li><a href="/">Privacy & Policy</a></li>
+        </div>
+        <section class="footer-social">
+            <h2>Follow Rainydays</h2>
+            <a href="/"><img src="images/header&footer/facebook.png" alt="facebook logo"></a>
+            <a href="/"><img src="images/header&footer/instagram.png" alt="instagram logo"></a>
+        </section>
+    </footer>
+</body>
+</html>

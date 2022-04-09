@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Rainydays website - checkout page</title>
+    <meta name="description" content="The checkout page for Rainydays">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <!--Link to CSS file-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <header class="flexbox">
+        <a class="logo-home"href="index.html">
+        <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
+      </a>
+      <nav class="flexbox">
+        <ul id="icons">
+          <li><a href="/">
+            <figure>
+            <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
+            <figcaption>Basket</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/favorite.png" alt="favorite heart">
+            <figcaption>Favorite</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/login.png" alt="user">
+            <figcaption>Profile</figcaption>
+            </figure>
+          </a></li>
+        </ul>
+        <input type="checkbox" id="hamburger-menu">
+      <label for="hamburger-menu" class="hamburger"><img src="images/header&footer/menu.png" alt="hamburger menu"></label>
+      <label for="hamburger-menu" class="close"><img src="images/header&footer/close.png" alt="close"></label>
+        <ul class="nav-text">
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="unisex.html">Unisex</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      </header>   
+    <main>
+        <section class="page-heading">
+            <div class="breadcrumbs">
+              <a href="index.html">Home</a>
+              >
+              <a href="checkout.html" class="current-breadcrumbs">Basket</a>
+          </div>
+          <h1>Basket</h1>
+        </section>
+
+        <section class="container-checkout">
+            <section class="shopping-cart">
+                <h2>Shopping cart</h2>
+                <div class="cart-container">
+                <div class="cart-item">
+                    <img src="/images/products/red.jpg" alt="man with red jacket">
+                    <div class="jacket-info-container">
+                    <div class="cart-jacket-info">
+                    <h3>Coastal Rain 02</h3>
+                    <span>Color: Red</span>
+                    <span>Size: S - Small</span>
+                    </div>
+                    <div class="cart-jacket-number">
+                        <button class="subtract"></button>
+                        <span class="number">1</span>
+                        <button class="add"></button>
+                    </div>
+                    <h4>1 999 NOK</h4>
+                </div>
+                </div>
+                <div class="discount-code">
+                    <label for="discount">Discount code:</label>
+                    <input type="text" name="discount">
+                    <button class="dark-button" type="button">Confirm</button>
+                </div>
+                </div>
+            </section>
+            <section class="checkout-forms">
+                <div class="light-section">
+                    <h2>Summary</h2>
+                    <p>Expected delivery 3-4 days from shipping.</p>
+                    <div class="summary-info">
+                        <div class="p-two-columns">
+                    <p>Sum</p>
+                    <p>1 999 NOK</p>
+                    </div>
+                    <div class="p-two-columns">
+                    <p>Shipping</p>
+                    <p>69 NOK</p>
+                    </div>
+                    <div class="p-two-columns">
+                    <p>Total sum (including 25% vat.) </p>
+                    <p>2 068 NOK</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="address">
+                    <h2>Address</h2>
+                    <div class="p-two-columns">
+                        <p>If you're already a member</p>
+                        <a href="checkout.html" class="text-link-orange">Sign in</a>
+                    </div>
+                    <div class="p-two-columns">
+                        <p>If not</p>
+                        <a href="checkout.html" class="text-link-blue">Register account</a>
+                    </div>
+                    <form class="address-form">
+                        <ul>
+                        <div class="address-name">
+                        <li>
+                        <label for="firstname">First name</label>
+                        <input type="text" name="firstname" id="firstname" required>
+                        </li>
+                        <li>
+                        <label for="lastname">Last name</label>
+                        <input type="text" name="lastname" id="lastname" required>
+                        </li>
+                        </div>
+                        <li>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" required>
+                        </li>
+                        <div class="postal-town">
+                        <li>
+                        <label for="postalcode">Postal code</label>
+                        <input type="text" name="postalcode" id="postalcode" required>
+                        </li>
+                        <li>
+                        <label for="Town">Town</label>
+                        <input type="text" name="town" id="town" required>
+                        </li>
+                        </div>
+                        <li>
+                        <label for="emailaddress">Email address</label>
+                        <input type="email" name="emailaddress" id="emailaddress" required>
+                        </li>
+                        <li>
+                        <label for="phonenumber">Phone number</label>
+                        <input type="tel" name="phonenumber" id="phonenumber" required>
+                        </li>
+                        </ul>
+                    </form>
+                </div>
+           
+          <div class="billing">
+            <h2>Billing</h2>
+            <form class="billing-form">
+                <ul>
+                    <li>
+                    <label for="cardholder">Cardholder name</label>
+                    <input type="text" name="cardholder" id="cardholder" required>
+                    </li>
+                    <li>
+                    <label for="cardnumber">Card number</label>
+                    <input type="text" name="cardnumber" id="cardnumber" required>
+                    </li>
+                    <div class="expiration-ccv">
+                    <li>
+                    <label for="expirationdate">Expiration date</label>
+                    <input type="date" name="expirationdate" id="expirationdate" required>
+                    </li>
+                    <li>
+                    <label for="ccv">CCV-code</label>
+                    <input type="text" name="ccv" id="ccv" required>
+                    </li>
+                    </div>
+                </ul>
+            </form>
+            <a href="checkout-success.html"><button class="cta">Pay</button>
+            </a>
+          </div>
+          </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact and Help</a></li>
+            </ul> 
+        </div>
+        <div class="footer-settings">
+            <ul>
+            <li><a href="/">Settings for cookies</a></li>
+            <li><a href="/">Privacy & Policy</a></li>
+        </div>
+        <section class="footer-social">
+            <h2>Follow Rainydays</h2>
+            <a href="/"><img src="images/header&footer/facebook.png" alt="facebook logo"></a>
+            <a href="/"><img src="images/header&footer/instagram.png" alt="instagram logo"></a>
+        </section>
+    </footer>
+</body>
+</html>
