@@ -945,7 +945,7 @@ position: absolute;
 .contact-form {
   background-color: var(--light-grey);
   padding: 5%;
-  margin: 15px 0 30px;
+  margin: 15px 0 15px;
 }
 
 .container-checkout h2, .billing h2 {
