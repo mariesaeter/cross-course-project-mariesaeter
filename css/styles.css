@@ -1134,6 +1134,38 @@ position: absolute;
   margin-top: 20px;
 }
 
+.contact-form .cta {
+  text-align: center;
+}
+.message-flex {
+  display: flex;
+  flex-direction: column;
+}
+.message-sent,
+#send-message {
+  display: none;
+}
+#send-message:checked ~ .message-sent {
+  display: inline-block;
+  text-align: right;
+  right: 50px;
+  margin-top: 15px;
+}
+
+.message-sent p {
+  padding: 0;
+}
+
+.message-sent > p:first-child::before {
+  content: "";
+  background-image: url(/images/checkmark-filled.png);
+  width: 24px;
+  height: 24px;
+ background-size:24px;
+ display: inline-block;
+ background-repeat: no-repeat;
+}
+
 /* --- CHECKOUT SUCCESS PAGE */
 .success {
   background-color: var(--dark-blue);
@@ -1281,8 +1313,10 @@ position: absolute;
 
   body.active li.active a {
     background-color: var(--light-blue);
-    padding: 46px 20px;
+    padding: 36px 20px;
+    padding-top: 60px;
   }
+
   .bestsellers .product-section .product-card {
     flex-basis: 21%;
   }
