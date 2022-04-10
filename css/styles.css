@@ -21,13 +21,13 @@ footer {
   align-items: center;
   width: 100%;
   padding-left: 30px;
-  box-sizing: border-box;
 }
 header {
   position: fixed;
   top: 0;
   z-index: 99;
 }
+
 main {
   margin-top: 110px;
 }
@@ -39,7 +39,6 @@ body {
   background-color: var(--light-blue);
   color: var(--dark-blue);
   width: 100%;
-  box-sizing: border-box;
 }
 
 h1 {
@@ -47,6 +46,7 @@ h1 {
 }
 h2 {
   font-size: 1.5em;
+  font-weight: normal;
 }
 
 h3 {
@@ -58,12 +58,12 @@ h2 {
   font-family: "Quattrocento", serif;
 }
 
-p,
-h1,
-h2,
-h3,
-h4 {
+p, h1, h2, h3, h4 {
   margin: 0;
+}
+
+p {
+  line-height: 2em;
 }
 
 a {
@@ -71,8 +71,6 @@ a {
   text-decoration: none;
   color: var(--dark-blue);
 }
-
-
 
 button {
   transition: all 0.3s ease-in-out;
@@ -86,7 +84,6 @@ button {
   font-size: 1.125em;
   text-transform: uppercase;
   padding: 15px 40px;
-  box-sizing: border-box;
   font-weight: bold;
   border: 3px solid transparent;
   cursor: pointer;
@@ -96,7 +93,6 @@ button {
   background-color: var(--light-blue);
   color: var(--orange);
   border: 3px solid var(--orange);
-  box-sizing: border-box;
 }
 
 .cta-light {
@@ -120,13 +116,14 @@ button {
   padding: 15px 40px;
   border-radius: 30px;
   text-transform: uppercase;
+  margin-top: 15px;
 }
 
 .dark-button:hover {
   background-color: #1b2547;
 }
 
-/*Breadcrumbs*/
+/* Breadcrumbs */
 
 .breadcrumbs a {
   display: inline-flex;
@@ -147,8 +144,8 @@ button {
   margin-bottom: 15px;
 }
 
-/* HEADER */
-header a,
+/* --- header --- */
+header a, 
 footer a {
   color: var(--light-blue);
   padding: 0;
@@ -186,14 +183,10 @@ header.flexbox {
   align-items: center;
   width: 100%;
   height: 110px;
-  box-sizing: border-box;
   gap: 20px;
   padding-right: 20px;
 }
 
-.logo-home {
-  flex-grow: 2;
-}
 .logo {
   max-height: 50px;
 }
@@ -203,7 +196,6 @@ figure {
   flex-flow: column;
   align-items: center;
   margin: 0;
-  flex-grow: 1;
 }
 
 figure figcaption {
@@ -237,20 +229,19 @@ nav, #icons{
 .nav-text {
   background-color: var(--light-grey);
   padding: 50px;
+  margin-top: 20px;
 }
 .nav-text a {
   color: var(--dark-blue);
   font-family: "quattrocento", serif;
   line-height: 3;
+
 }
 
+.close,
 #hamburger-menu, 
 #close-menu,
 #add-to-cart {
-  display: none;
-}
-
-.close {
   display: none;
 }
 
@@ -362,7 +353,7 @@ footer {
   margin-right: 15px;
 }
 
-/* HOME */
+/* --- HOME --- */
 
 /* Shop navigation with CTA */
 .container-shopnav {
@@ -407,13 +398,11 @@ footer {
 }
 
 .waterproof h1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .waterproof p {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 0 10%;
   line-height: 1.5em;
   margin-top: 15px;
 }
@@ -436,7 +425,8 @@ section.bestsellers {
   overflow-x: auto;
   box-sizing: border-box;
   gap: 25px;
-}
+} /*rest of the styling is gathered from the jacket list page */
+
 
 /* SECTION - Get updates */
 section.subscribe {
@@ -446,8 +436,7 @@ section.subscribe {
 }
 
 .subscribe p {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding: 0 20%;
   line-height: 1.5em;
   margin: 20px 0;
 }
@@ -471,7 +460,6 @@ input[type="date"],
 textarea,
 select {
   padding: 15px 20px;
-  box-sizing: border-box;
   border: 2px solid rgba(17,23,45, .2);
   background-color: var(--light-blue);
   border-radius: 5px;
@@ -499,7 +487,7 @@ background-color: rgba(245,250,252, .65);
 }
 
 
-/* MEN - JACKET LIST */
+/* --- MEN - JACKET LIST --- */
 .sort {
   text-align: center;
 }
@@ -538,10 +526,8 @@ button.filter {
   margin-left: 30px;
 }
 
-
 .filter:focus ~#filter-box {
   display: block;
-  
 }
 
 /* --- products --- */
@@ -622,7 +608,7 @@ button.filter {
 .slideshow {
   position: relative;
   width: 100%;
-  height:450px;
+  height:400px;
 }
 
 .slideshow-view {
@@ -660,14 +646,10 @@ button.filter {
   
 }
 
-
-.slide-img-red3, .slide-img {
+.slide-img {
   position: relative;
   width: 100%;
-}
-
-.slide-img {
-  top: -30%;
+  top: -50px;
 }
 
 .slide-prev, 
@@ -689,7 +671,6 @@ button.filter {
 
 .slide-next {
   right: 0;
-
 }
 
 /* info section */
@@ -700,7 +681,6 @@ button.filter {
 .size .chosen {
   background-color: var(--light-grey);
   padding: 5px 15px;
-  box-sizing: border-box;
   font-weight: bold;
 }
 
@@ -882,7 +862,6 @@ position: absolute;
   width: 100%;
   background-color: var(--light-grey);
   padding: 5px 15px;
-  box-sizing: border-box;
   display: block;
   position: relative;
 }
@@ -1008,8 +987,8 @@ position: absolute;
   height: 30px;
   background-repeat: no-repeat;
   position: absolute;
-  right: 12px;
-  top: 12px;
+  right: 0px;
+  top: 0px;
 }
 
 .cart-jacket-number {
@@ -1046,6 +1025,7 @@ position: absolute;
   width: 45px;
   height: 45px;
   margin: 0 10px;
+  padding-top: 10px;
   text-align: center;
   font-size:x-large;
   border-radius: 5px;
@@ -1059,11 +1039,11 @@ position: absolute;
 .discount-code {
   display: flex;
   align-self: flex-end;
-  
-
+  flex-direction: column;
+  margin-top: 30px;
 }
-.discount-code button {
- 
+.discount-code label {
+  align-self: flex-start;
 }
 
 .summary-info {
@@ -1071,13 +1051,13 @@ position: absolute;
   flex-direction: column;
 }
 
+.summary-info .total {
+  font-weight: bold;
+}
+
 .container-checkout .p-two-columns{
   display: flex;
   justify-content: space-between;
-}
-
-.summary-info .total {
-  font-weight: bold;
 }
 
 .light-section,
@@ -1104,13 +1084,11 @@ position: absolute;
   text-decoration: underline;
 }
 
-
 .address-form,
 .billing-form {
   width: fit-content;
   margin: 0 auto;
 }
-
 
 .address-form input,
 .billing-form input,
@@ -1130,30 +1108,30 @@ position: absolute;
 .expiration-ccv {
   display: inline-flex;
   column-gap: 15px;
- 
-
 }
 
-.postal-town #town {
-  flex-basis: 60%;
+.billing form {
+  position: relative;
+  margin-bottom: 60px;
 }
 
-.postal-town #postalcode {
-  flex-basis: 40%;
+.billing a {
+  position: absolute;
+ right: 0;
+ margin-top: 15px;
 }
 
 /* --- CONTACT PAGE --- */
-.contact-info {
-  text-align: center;
-}
-
 .contact-info a {
-  color: var(--bright-blue);
-  
+  color: var(--bright-blue); 
 }
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+.contact-form input[type="submit"] {
+  margin-top: 20px;
 }
 
 /* --- CHECKOUT SUCCESS PAGE */
@@ -1166,7 +1144,6 @@ position: absolute;
   margin: 30px 0;
   align-items: center;
   margin-top: 140px;
-
 }
 
 .success span {
@@ -1180,14 +1157,7 @@ position: absolute;
   background-repeat: no-repeat;
   border-radius: 50%;
   margin-bottom: 30px;
-  
 }
-
-
-
-
-
-
 
 /* --- MEDIA QUERIES --- */
 @media (min-width: 648px) {
@@ -1195,7 +1165,6 @@ position: absolute;
     display: flex;
     align-items: center;
     padding: 20px;
-    box-sizing: border-box;
   }
 
   nav.flexbox {
@@ -1204,7 +1173,6 @@ position: absolute;
     align-items: center;
     width: 100%;
     height: 110px;
-    box-sizing: border-box;
     gap: 25px;
   }
 
@@ -1257,10 +1225,15 @@ position: absolute;
 }
 .slideshow {
   flex: 1;
+  height: 600px;
 }
 
 .jacket-info {
-  flex: 2;
+  flex: 1;
+}
+
+.slide-img {
+  top: 0px;
 }
 
  /* --- CHECKOUT PAGE --- */
@@ -1275,14 +1248,12 @@ position: absolute;
   margin: 0 auto;
 }
 }
- 
 
 @media (min-width: 648px) and (max-width: 992px) {
   figure {
     margin: 0;
     align-self: flex-end;
   }
-
 }
 
 @media (min-width: 992px) {
@@ -1326,6 +1297,15 @@ position: absolute;
     width: 50%;
   }
 
+  /* --- JACKET SPECIFIC --- */
+  .slideshow {
+    flex: 1;
+  }
+  
+  .jacket-info {
+    flex: 2;
+  }
+
   /* --- ABOUT --- */
   .container-about {
     display: flex;
@@ -1355,7 +1335,7 @@ position: absolute;
   }
   .page-heading #about{
     text-align: left;
-    margin-left: 11%;
+    margin-left: 10%;
   }
  /* --- CHECKOUT PAGE --- */
 
@@ -1368,26 +1348,23 @@ position: absolute;
   width: 70%;
   margin: 0 auto;
 }
- 
 }
 
 
   @media (min-width: 1270px) {
+  /*MEN - JACKET LIST */
+  .page-heading h1{
+    text-align: left;
+    margin-left: 11%;
+  }
 
-  .container-product-filter {
+    .container-product-filter {
     display: flex;
     flex-direction: row;
     width: 78%;
     margin: 0 auto;
     align-items: flex-start;
   }
-
-  /*MEN - JACKET LIST */
-  .page-heading h1{
-    text-align: left;
-    margin-left: 11%;
-  }
-  
 
   button.filter {
    display: none;
@@ -1434,6 +1411,4 @@ position: absolute;
     width: 100%;
     text-align: left;
   }
-
-  
 }
