@@ -229,7 +229,6 @@ nav, #icons{
 .nav-text {
   background-color: var(--light-grey);
   padding: 50px;
-  margin-top: 20px;
 }
 .nav-text a {
   color: var(--dark-blue);
@@ -1313,8 +1312,7 @@ position: absolute;
 
   body.active li.active a {
     background-color: var(--light-blue);
-    padding: 36px 20px;
-    padding-top: 60px;
+    padding: 46px 20px;
   }
 
   .bestsellers .product-section .product-card {
