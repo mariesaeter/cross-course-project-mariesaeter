@@ -79,6 +79,7 @@ a {
 
 button {
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 /* CTA and buttons*/
@@ -106,6 +107,7 @@ button {
   font-size: 1em;
   margin: 20px 0;
   display: inline-block;
+  cursor: pointer;
 }
 
 .cta-light:hover {
@@ -122,6 +124,7 @@ button {
   border-radius: 30px;
   text-transform: uppercase;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .dark-button:hover {
@@ -209,12 +212,10 @@ figure figcaption {
   text-transform: uppercase;
 }
 
-.hamburger,
-.close {
-  flex-grow: 0;
-  z-index: 990;
-  margin-left: 5px;
-  cursor: pointer;
+.hamburger-btn {
+  background: none;
+  border: none;
+  z-index: 830;
 }
 
 .hamburger img,
@@ -223,7 +224,7 @@ nav img,
   width: 24px;
 }
 .nav-text,
-.icon {
+.menu {
   display: none;
 }
 
@@ -236,37 +237,29 @@ nav,
   align-items: center;
 }
 
-.nav-text {
-  background-color: var(--light-grey);
-  padding: 50px;
-}
-.nav-text a {
-  color: var(--dark-blue);
-  font-family: "quattrocento", serif;
-  line-height: 3;
-}
-
-.close,
-#hamburger-menu,
-#close-menu,
 #add-to-cart {
   display: none;
 }
 
-#hamburger-menu:checked ~ .nav-text {
-  display: block;
-  z-index: 800;
-  position: absolute;
+.close {
+  z-index: 400;
+  display: none;
+}
+
+.menu {
+  z-index: 600;
+  position: fixed;
   top: 0;
   right: 0;
+  background-color: var(--light-grey);
+  padding: 50px;
+  padding-top: 5rem;
 }
 
-#hamburger-menu:checked ~ .close {
-  display: block;
-}
-
-#hamburger-menu:checked + .hamburger {
-  display: none;
+.menu-item {
+  color: var(--dark-blue);
+  font-family: "quattrocento", serif;
+  line-height: 3;
 }
 
 /* Search */
@@ -465,7 +458,8 @@ input[type="date"],
 textarea,
 select {
   padding: 15px 20px;
-  border: 2px solid rgba(17, 23, 45, 0.2);
+  border: none;
+  outline: 2px solid rgba(17, 23, 45, 0.2);
   background-color: var(--light-blue);
   border-radius: 5px;
   color: var(--dark-blue);
@@ -838,22 +832,36 @@ button.filter {
   display: inline-block;
 }
 
-.cta-add-to-cart::before {
-  content: "Add to cart";
+.cart-figure {
+  position: relative;
 }
 
-#add-to-cart:checked ~ .cta-add-to-cart {
-  background-color: #5b7e0e;
-  width: 100%;
-  display: inline-block;
+.cart-count {
+  background-color: var(--orange);
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  position: absolute;
+  top: -15px;
+  right: 5px;
 }
-#add-to-cart:checked ~ .cta-add-to-cart::before {
+.counter {
+  color: var(--light-blue);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 1px;
+  text-align: center;
+}
+
+/*  */
+/* #add-to-cart:checked ~ .cta-add-to-cart::before {
   content: "Added";
 }
 #add-to-cart:checked ~ .cta-add-to-cart:hover {
   border: 3px solid transparent;
   color: var(--light-blue);
-}
+} */
 
 .product-description {
   margin-bottom: 10px;
@@ -1127,6 +1135,12 @@ button.filter {
   margin-top: 15px;
 }
 
+.form-error {
+  color: #c53c30;
+  display: none;
+  max-width: 180px;
+}
+
 /* --- CONTACT PAGE --- */
 .contact-info a {
   color: var(--bright-blue);
@@ -1302,10 +1316,10 @@ button.filter {
   }
 
   .nav-text {
-    order: -1;
     display: flex;
     padding: 0;
     background: transparent;
+    position: relative;
   }
 
   .nav-text a {
@@ -1313,7 +1327,7 @@ button.filter {
     font-family: "Quattrocento Sans", Verdana, Tahoma, sans-serif;
   }
 
-  .hamburger {
+  .hamburger-btn {
     display: none;
   }
 
