@@ -4,7 +4,7 @@ const counter = document.querySelector(".counter");
 
 // addToCart.addEventListener("click", function onClick() {
 //   addToCart.style.backgroundColor = "#5b7e0e";
-//   addToCart.innerHTML = "Added";
+//   addToCart.innerHTML = "Added";s
 //   addToCart.style.pointerEvents = "none";
 // });
 
@@ -25,12 +25,53 @@ const counter = document.querySelector(".counter");
 
 // addToCart.addEventListener("click", add);
 
-function clickAdd() {}
+// function clickAdd() {}
 
-function add() {
-  addToCart.style.backgroundColor = "#5b7e0e";
-  addToCart.innerHTML = "Added";
-  addToCart.style.pointerEvents = "none";
+// function add() {
+//   addToCart.style.backgroundColor = "#5b7e0e";
+//   addToCart.innerHTML = "Added";
+//   addToCart.style.pointerEvents = "none";
+// }
+
+// addToCart.addEventListener("click", add);
+// let cartCount = 0;
+
+// addToCart.addEventListener("click", (event) => {
+
+// } )
+
+const jacket = {
+  name: "Coastal Rain 02",
+  color: "red",
+  size: "S - Small",
+  price: "1 999 NOK",
+};
+
+// addToCart.forEach((click) => {
+//   click.addEventListener("click", addJacket);
+// });
+
+function addJacket() {
+  let local = window.localStorage.setItem("product", JSON.stringify(jacket));
+  console.log(local);
+
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+  } else {
+    localStorage.clickcount = 0;
+  }
+  counter.innerHTML = localStorage.clickcount;
 }
 
-addToCart.addEventListener("click", add);
+addToCart.addEventListener("click", addJacket);
+
+// function for adding the number of count to the basket counter
+// https://www.w3schools.com/jsrEF/prop_win_localstorage.asp
+// function count() {
+//   if (localStorage.clickcount) {
+//     localStorage.clickcount = Number(localStorage.clickcount) + 1;
+//   } else {
+//     localStorage.clickcount = 0;
+//   }
+//   counter.innerHTML = localStorage.clickcount;
+// }

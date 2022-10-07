@@ -197,6 +197,7 @@ header.flexbox {
 
 .logo {
   max-height: 50px;
+  z-index: 999;
 }
 
 figure {
@@ -459,7 +460,7 @@ textarea,
 select {
   padding: 15px 20px;
   border: none;
-  outline: 2px solid rgba(17, 23, 45, 0.2);
+  /* outline: 2px solid rgba(17, 23, 45, 0.2); */
   background-color: var(--light-blue);
   border-radius: 5px;
   color: var(--dark-blue);
@@ -992,7 +993,7 @@ button.filter {
   flex-basis: 75%;
 }
 
-.cart-jacket-info::after {
+.trash-can {
   content: "";
   display: inline-block;
   background-image: url(/images/trash-can.png);
@@ -1048,6 +1049,7 @@ button.filter {
 .cart-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .discount-code {
@@ -1137,8 +1139,12 @@ button.filter {
 
 .form-error {
   color: #c53c30;
-  display: none;
   max-width: 180px;
+  display: none;
+}
+
+.error-outline {
+  outline: 2px solid #c53c30;
 }
 
 /* --- CONTACT PAGE --- */

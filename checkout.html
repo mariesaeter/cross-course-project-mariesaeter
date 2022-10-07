@@ -92,20 +92,23 @@
             <section class="shopping-cart">
                 <h2>Shopping cart</h2>
                 <div class="cart-container">
-                <div class="cart-item">
+                <button class="trash-can"></button><div class="cart-item">
                     <img src="/images/products/red.jpg" alt="man with red jacket">
                     <div class="jacket-info-container">
-                    <div class="cart-jacket-info">
+                        <div class="cart-jacket-info">
+                            
+                        </div>
+                    <!-- <div class="cart-jacket-info">
                     <h3>Coastal Rain 02</h3>
                     <span>Color: Red</span>
                     <span>Size: S - Small</span>
-                    </div>
+                    </div> -->
                     <div class="cart-jacket-number">
                         <button class="subtract"></button>
                         <span class="number">1</span>
                         <button class="add"></button>
                     </div>
-                    <h4>1 999 NOK</h4>
+                    <!-- <h4>1 999 NOK</h4> -->
                 </div>
                 </div>
                 <div class="discount-code">
@@ -144,80 +147,80 @@
                         <p>If not</p>
                         <a href="checkout.html" class="text-link-blue">Register account</a>
                     </div>
-                    <form class="address-form">
+                    <form class="address-form" method="POST">
                         <ul>
                         <div class="address-name">
                         <li>
                         <label for="firstname">First name</label>
-                        <input type="text" name="firstname" id="firstname" required>
+                        <input type="text" name="firstname" id="firstname">
                         <div id="firstNameError" class="form-error">First name must be at least 1 character</div>
                         </li>
                         <li>
                         <label for="lastname">Last name</label>
-                        <input type="text" name="lastname" id="lastname" required>
+                        <input type="text" name="lastname" id="lastname">
                         <div id="lastNameError" class="form-error">Last name must be at least 1 character</div>
                         </li>
                         </div>
                         <li>
                         <label for="address">Address</label>
-                        <input type="text" name="address" id="address" required>
+                        <input type="text" name="address" id="address">
                         <div id="addressError" class="form-error">Address must be at least 3 characters</div>
                         </li>
                         <div class="postal-town">
                         <li>
                         <label for="postalcode">Postal code</label>
-                        <input type="text" name="postalcode" id="postalcode" required>
+                        <input type="text" name="postalcode" id="postalcode">
                         <div id="postalCodeError" class="form-error">Postal code must be 4 characters</div>
                         </li>
                         <li>
                         <label for="Town">Town</label>
-                        <input type="text" name="town" id="town" required>
+                        <input type="text" name="town" id="town">
                         <div id="townError" class="form-error">Town must be at least 1 character</div>
                         </li>
                         </div>
                         <li>
                         <label for="emailaddress">Email address</label>
-                        <input type="email" name="emailaddress" id="emailaddress" required>
+                        <input type="email" name="emailaddress" id="emailaddress">
                         <div id="emailError" class="form-error">Email must be in this format (example)</div>
                         </li>
                         <li>
                         <label for="phonenumber">Phone number</label>
-                        <input type="tel" name="phonenumber" id="phonenumber" required>
+                        <input type="tel" name="phonenumber" id="phonenumber">
                         <div id="phoneNumberError" class="form-error">Phone number must be 9 numbers</div>
                         </li>
                         </ul>
-                    </form>
                 </div>
            
           <div class="billing">
             <h2>Billing</h2>
-            <form class="billing-form">
+            
                 <ul>
                     <li>
                     <label for="cardholder">Cardholder name</label>
-                    <input type="text" name="cardholder" id="cardholder" required>
+                    <input type="text" name="cardholder" id="cardholder">
                     <div id="cardHolderError" class="form-error">Cardholder name must be at least 1 character</div>
                     </li>
                     <li>
                     <label for="cardnumber">Card number</label>
-                    <input type="text" name="cardnumber" id="cardnumber" required>
+                    <input type="text" name="cardnumber" id="cardnumber">
                     <div id="cardNumberError" class="form-error">Card number must be 12 numbers</div>
                     </li>
                     <div class="expiration-ccv">
                     <li>
                     <label for="expirationdate">Expiration date</label>
-                    <input type="text" name="expirationdate" id="expirationdate" required>
+                    <input type="text" name="expirationdate" id="expirationdate">
                     <div id="expirationError" class="form-error">Expiration date must be in the format MM/YY</div>
                     </li>
                     <li>
                     <label for="ccv">CCV-code</label>
-                    <input type="text" name="ccv" id="ccv" required>
+                    <input type="text" name="ccv" id="ccv">
                     <div id="ccvError" class="form-error">CCV must be 3 numbers</div>
                     </li>
                     </div>
                 </ul>
-                <a href="checkout-success.html" class="cta">Pay
-                </a>
+                <button type="submit" class="cta" id="pay">Pay</button>
+                <!-- <a href="checkout-success.html" class="cta">Pay
+                </a> -->
             </form>
             
           </div>
@@ -242,6 +245,7 @@
         </section>
     </footer>
     <script src="js/hamburger.js"></script>
+    <script src="js/checkout-product.js"></script>
     <script src="js/checkout.js"></script>
 </body>
 </html>
