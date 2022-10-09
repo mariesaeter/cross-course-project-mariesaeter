@@ -1,6 +1,5 @@
 import { displayCount } from "./components/count-in-basket.js";
 
-const cartItemContainer = document.querySelector(".cart-item");
 const cart = document.querySelector(".cart-container");
 const jacketInfo = document.querySelector(".cart-jacket-info");
 const delProduct = document.querySelector(".trash-can");
@@ -9,9 +8,6 @@ const emptyCart = document.querySelector(".empty-cart");
 const checkoutForms = document.querySelector(".checkout-forms");
 
 console.log(delProduct);
-
-// let data = JSON.parse(window.localStorage.getItem("product"));
-// console.log(data);
 
 // retrieve product from local storage
 function getProduct() {
@@ -52,5 +48,5 @@ function deleteProduct() {
 
 delProduct.addEventListener("click", deleteProduct);
 
-// change number in basket?
+// display quantity in basket on the product (not functional to add or substract)
 numberInBasket.innerHTML = localStorage.clickcount;

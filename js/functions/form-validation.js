@@ -15,9 +15,18 @@ export function checkNumber(number) {
   return matchNumber;
 }
 
-// fuction for validating email (expression found at https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript)
+// function for validating email (reg-expression from lesson javascript 1 4.4 Form validation)
 export function validateEmail(email) {
-  const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+  const regEx = /\S+@\S+\.\S+/;
   const matchEmail = regEx.test(email);
   return matchEmail;
+}
+
+// function for validating inputs with specific number such as postal code
+export function validateSpecificNumber(value, len) {
+  if (value.trim().length === len) {
+    return true;
+  } else {
+    return false;
+  }
 }

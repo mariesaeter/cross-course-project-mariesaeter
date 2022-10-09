@@ -1,8 +1,7 @@
 const counter = document.querySelector(".counter");
 const counterBackground = document.querySelector(".cart-count");
 
-//import { newCount } from "../addtocart.js";
-
+// display how many "products" that are stored in the basket over all pages
 export function displayCount() {
   if (localStorage.clickcount) {
     counter.style.display = "block";

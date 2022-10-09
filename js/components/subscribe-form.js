@@ -5,10 +5,12 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector(".email-error");
 const message = document.querySelector(".sub-message");
 
+// prevent parameters from being added to the url
 form.onsubmit = function (event) {
   event.preventDefault();
 };
 
+// validate the email address / show error message
 function validateEmailAddress(event) {
   event.preventDefault();
 
@@ -21,6 +23,7 @@ function validateEmailAddress(event) {
   }
 }
 
+// submit form success if validation of email is correct
 function submitForm(event) {
   event.preventDefault();
 

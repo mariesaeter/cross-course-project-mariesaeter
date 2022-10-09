@@ -468,7 +468,6 @@ textarea,
 select {
   padding: 15px 20px;
   border: none;
-  /* outline: 2px solid rgba(17, 23, 45, 0.2); */
   background-color: var(--light-blue);
   border-radius: 5px;
   color: var(--dark-blue);

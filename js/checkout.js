@@ -1,6 +1,7 @@
 import { checkLength } from "./functions/form-validation.js";
 import { checkNumber } from "./functions/form-validation.js";
 import { validateEmail } from "./functions/form-validation.js";
+import { validateSpecificNumber } from "./functions/form-validation.js";
 
 const form = document.querySelector(".address-form");
 const firstName = document.querySelector("#firstname");
@@ -26,60 +27,7 @@ const cardHolderError = document.querySelector("#cardHolderError");
 const cardNumberError = document.querySelector("#cardNumberError");
 const ccvError = document.querySelector("#ccvError");
 
-// Click event for displaying error messages after clicking out of the input field firstName
-// https://www.codegrepper.com/code-examples/javascript/click+on+input+and+click+outside+then+show+error
-// Make into function
-// const ignoreClickOnFirstName = firstName;
-
-// document.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   const isClickedInsideElement = firstName.contains(event.target);
-//   if (!isClickedInsideElement && checkLength(firstName.value, 1)) {
-//     firstNameError.style.display = "flex";
-//   } else {
-//     firstNameError.style.display = "none";
-//   }
-// });
-
-// //Show error message
-// document.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   const isClickedInsideLastName = lastName.contains(event.target);
-//   if (!isClickedInsideLastName && checkLength(lastName.value, 1)) {
-//     lastNameError.style.display = "flex";
-//   } else {
-//     lastNameError.style.display = "none";
-//   }
-// });
-
-// document.addEventListener("click", function (event) {
-//   event.preventDefault();
-// });
-
-// function validateInput(event) {
-//   event.preventDefault();
-
-//   document.addEventListener("click");
-// }
-
-// function validateForm(event) {
-//     event.preventDefault();
-
-// }
-
-// function submitForm(event) {
-//     event.preventDefault();
-
-//     if(
-//         checkLength(firstName).value, 1) &&
-//         checkLength(lastName).value, 1) &&
-//         checkLength(address).value, 1) &&
-//         checkLength()
-
-// )
-// }
-
-//validate form version 2 (not good)
+//validate form: one function for each form field to get the inline validation to function
 function validateName(event) {
   event.preventDefault();
 
@@ -212,80 +160,7 @@ function validateCcv(event) {
   }
 }
 
-// function validateForm(event) {
-//   event.preventDefault();
-
-//   if (checkLength(firstName.value, 1) === true) {
-//     firstNameError.style.display = "none";
-//     firstName.classList.remove("error-outline");
-//   } else {
-//     firstNameError.style.display = "block";
-//     firstName.classList.add("error-outline");
-//   }
-//   if (checkLength(lastName.value, 1) === true) {
-//     lastNameError.style.display = "none";
-//   } else {
-//     lastNameError.style.display = "block";
-//     lastName.classList.add("error-outline");
-//   }
-
-//   if (checkLength(address.value, 3) === true) {
-//     addressError.style.display = "none";
-//   } else {
-//     addressError.style.display = "block";
-//     address.classList.add("error-outline");
-//   }
-
-//   if (checkNumber(postalCode.value) === true) {
-//     postalCodeError.style.display = "none";
-//   } else {
-//     postalCodeError.style.display = "block";
-//     postalCode.classList.add("error-outline");
-//   }
-
-//   if (checkLength(town.value, 1) === true) {
-//     townError.style.display = "none";
-//   } else {
-//     townError.style.display = "block";
-//     town.classList.add("error-outline");
-//   }
-
-//   if (validateEmail(email.value) === true) {
-//     emailError.style.display = "none";
-//   } else {
-//     emailError.style.display = "block";
-//     email.classList.add("error-outline");
-//   }
-
-//   if (checkNumber(phoneNumber.value) === true) {
-//     phoneNumberError.style.display = "none";
-//   } else {
-//     phoneNumberError.style.display = "block";
-//     phoneNumber.classList.add("error-outline");
-//   }
-
-//   if (checkLength(cardHolder.value, 1) === true) {
-//     cardHolderError.style.display = "none";
-//   } else {
-//     cardHolderError.style.display = "block";
-//     cardHolder.classList.add("error-outline");
-//   }
-
-//   if (checkNumber(cardNumber.value) === true) {
-//     cardNumberError.style.display = "none";
-//   } else {
-//     cardNumberError.style.display = "block";
-//     cardNumber.classList.add("error-outline");
-//   }
-
-//   if (checkNumber(ccv.value) === true) {
-//     ccvError.style.display = "none";
-//   } else {
-//     ccvError.style.display = "block";
-//     ccv.classList.add("error-outline");
-//   }
-// }
-
+// check validation requirements and go to checkout-success if validation succeeds
 function payForm(event) {
   event.preventDefault();
 
@@ -311,6 +186,7 @@ function payForm(event) {
   }
 }
 
+// inline validation and validation on "submit"
 firstName.addEventListener("keyup", validateName);
 form.addEventListener("submit", validateName);
 lastName.addEventListener("keyup", validateLastName);
@@ -332,17 +208,5 @@ form.addEventListener("submit", validateCardNumber);
 ccv.addEventListener("keyup", validateCcv);
 form.addEventListener("submit", validateCcv);
 
+// submit form and activate validation function to see if all requirements are met
 form.addEventListener("submit", payForm);
-
-// buttonPay.onclick = function () {
-//   location.href = "checkout-success.html";
-// };
-
-// validate postal code
-function validateSpecificNumber(value, len) {
-  if (value.trim().length === len) {
-    return true;
-  } else {
-    return false;
-  }
-}
