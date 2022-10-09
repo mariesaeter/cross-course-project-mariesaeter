@@ -844,6 +844,10 @@ button.filter {
   position: relative;
 }
 
+.cart-product {
+  max-width: 80%;
+}
+
 .cart-count {
   display: none;
   background-color: var(--orange);
