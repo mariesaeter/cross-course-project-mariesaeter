@@ -1,3 +1,7 @@
+import { checkLength } from "./functions/form-validation.js";
+import { checkNumber } from "./functions/form-validation.js";
+import { validateEmail } from "./functions/form-validation.js";
+
 const form = document.querySelector(".address-form");
 const firstName = document.querySelector("#firstname");
 const lastName = document.querySelector("#lastname");
@@ -7,10 +11,8 @@ const town = document.querySelector("#town");
 const email = document.querySelector("#emailaddress");
 const phoneNumber = document.querySelector("#phonenumber");
 
-const billingForm = document.querySelector(".billing-form");
 const cardHolder = document.querySelector("#cardholder");
 const cardNumber = document.querySelector("#cardnumber");
-const expirationDate = document.querySelector("#expirationdate");
 const ccv = document.querySelector("#ccv");
 
 const firstNameError = document.querySelector("#firstNameError");
@@ -22,10 +24,7 @@ const emailError = document.querySelector("#emailError");
 const phoneNumberError = document.querySelector("#phoneNumberError");
 const cardHolderError = document.querySelector("#cardHolderError");
 const cardNumberError = document.querySelector("#cardNumberError");
-const expirationError = document.querySelector("#expirationError");
 const ccvError = document.querySelector("#ccvError");
-
-const buttonPay = document.querySelector("#pay");
 
 // Click event for displaying error messages after clicking out of the input field firstName
 // https://www.codegrepper.com/code-examples/javascript/click+on+input+and+click+outside+then+show+error
@@ -120,7 +119,10 @@ function validateAddress(event) {
 function validatePostalCode(event) {
   event.preventDefault();
 
-  if (checkNumber(postalCode.value) === true) {
+  if (
+    checkNumber(postalCode.value) === true &&
+    validateSpecificNumber(postalCode.value, 4) === true
+  ) {
     postalCodeError.style.display = "none";
     postalCode.classList.remove("error-outline");
   } else {
@@ -156,7 +158,10 @@ function validateEmailAddress(event) {
 function validatePhoneNumber(event) {
   event.preventDefault();
 
-  if (checkNumber(phoneNumber.value) === true) {
+  if (
+    checkNumber(phoneNumber.value) === true &&
+    validateSpecificNumber(phoneNumber.value, 8) === true
+  ) {
     phoneNumberError.style.display = "none";
     phoneNumber.classList.remove("error-outline");
   } else {
@@ -180,7 +185,10 @@ function validateCardHolder(event) {
 function validateCardNumber(event) {
   event.preventDefault();
 
-  if (checkLength(cardNumber.value, 1) === true) {
+  if (
+    checkLength(cardNumber.value, 1) === true &&
+    validateSpecificNumber(cardNumber.value, 16) === true
+  ) {
     cardNumberError.style.display = "none";
     cardNumber.classList.remove("error-outline");
   } else {
@@ -192,7 +200,10 @@ function validateCardNumber(event) {
 function validateCcv(event) {
   event.preventDefault();
 
-  if (checkNumber(ccv.value) === true) {
+  if (
+    checkNumber(ccv.value) === true &&
+    validateSpecificNumber(ccv.value, 3) === true
+  ) {
     ccvError.style.display = "none";
     ccv.classList.remove("error-outline");
   } else {
@@ -284,15 +295,19 @@ function payForm(event) {
     checkLength(address.value, 3) &&
     checkLength(address.value, 3) &&
     checkNumber(postalCode.value) &&
+    validateSpecificNumber(postalCode.value, 4) &&
     checkLength(town.value, 1) &&
     validateEmail(email.value) &&
     checkNumber(phoneNumber.value) &&
+    validateSpecificNumber(phoneNumber.value, 8) &&
     checkLength(cardHolder.value, 1) &&
     checkNumber(cardNumber.value) &&
-    checkNumber(ccv.value)
+    validateSpecificNumber(cardNumber.value, 16) &&
+    checkNumber(ccv.value) &&
+    validateSpecificNumber(ccv.value, 3)
   ) {
-    console.log("Hello");
     location.href = "checkout-success.html";
+    window.localStorage.clear();
   }
 }
 
@@ -323,36 +338,11 @@ form.addEventListener("submit", payForm);
 //   location.href = "checkout-success.html";
 // };
 
-// check the length of inputs
-// value = length of the input
-// len = the minimum length needed
-function checkLength(value, len) {
-  if (value.trim().length >= len) {
+// validate postal code
+function validateSpecificNumber(value, len) {
+  if (value.trim().length === len) {
     return true;
   } else {
     return false;
   }
-}
-
-// validate postal code
-// function validateSpecificNumber(value) {
-//   if (value.trim().length === 4) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
-function checkNumber(number) {
-  const isNumber = /[0-9]/;
-  const matchNumber = isNumber.test(number);
-  return matchNumber;
-}
-
-// fuction for validating email (expression found at https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript)
-function validateEmail(email) {
-  const regEx =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  const matchEmail = regEx.test(email);
-  return matchEmail;
 }

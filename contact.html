@@ -23,7 +23,7 @@
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 </head>
-<body>
+<body class="active">
     <header class="flexbox">
         <a class="logo-home"href="index.html">
         <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
@@ -32,17 +32,18 @@
         <ul class="menu">
           <li><a class="menu-item" href="men.html">Men</a></li>
           <li><a class="menu-item" href="women.html">Women</a></li>
-          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li class="active"><a class="menu-item" href="contact.html">Contact</a></li>
           <li><a class="menu-item" href="about.html">About</a></li>
       </ul>
         <ul class="nav-text">
           <li><a class="menu-item" href="men.html">Men</a></li>
           <li><a class="menu-item" href="women.html">Women</a></li>
-          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li class="active"><a class="menu-item" href="contact.html">Contact</a></li>
           <li><a class="menu-item" href="about.html">About</a></li>
       </ul>
       <ul id="icons">
-          <li><a href="checkout.html">
+          <li><a class="cart-figure" href="checkout.html">
+            <div class="cart-count"><div class="counter">0</div></div>
             <figure>
             <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
             <figcaption>Basket</figcaption>
@@ -91,35 +92,38 @@
         <section class="contact-form">
                 <h2>Send message</h2>
                 <p>Please select the category that is best suited for your question.</p>
-            <form>
+            <form id="contact-form">
                 <ul>
                 <li>
-                <select  name="question-theme" id="question-theme" required>
+                <select  name="question-theme" id="question-theme" >
                     <option value="shipping">Shipping</option>
                     <option value="return">Return</option>
                     <option value="other">Other</option>
                 </select>
                     </li>
                     <li>
-                    <label for="name"> Name (first and last)</label>
-                    <input type="text" name="name" id="name" required>
+                    <label for="name"> Name (first and last)
+                    <input type="text" name="name" id="name" >
+                    </label>
+                    <div class="form-error" id="name-error">Name must be at least 2 character</div>
                     </li>
                     <li>
-                    <label for="emailaddress">Email address</label>
-                    <input type="email" name="emailaddress" id="emailaddress" required>
+                    <label for="emailaddress">Email address
+                    <input type="email" name="emailaddress" id="emailaddress" >
+                  </label>
+                    <div class="form-error email-error">E-mail must follow this format: example@mail.com</div>
                     </li>
                     <li>
+                      <label for="message">Message: (min 25 characters)
                     <textarea id="message" name="message" rows="5" cols="30" placeholder="Write message here..."></textarea>
+                    </label>
+                    <div class="form-error" id="message-error">Message needs to be at least 25 characters long</div>
                     </li>
                     </ul>
                     <div class="message-flex">
-                    <input type="checkbox" id="send-message">
-                    <label for="send-message" class="cta">Send</label>
+                      <button type="submit" class="cta">Send</button>
                 <div class="message-sent">
-                     <p>Message sent!</p>
-                    <p>We will get back to you as soon as we can.</p>
-                </div>
-                </div>
+                </div></div>
                 </form>
             </div>
         </section>
@@ -144,5 +148,8 @@
         </section>
     </footer>
     <script src="js/hamburger.js"></script>
+    <script src="js/components/count-in-basket.js" type="module"></script>
+    <script src="js/contact-form.js" type="module"></script>
+
 </body>
 </html>

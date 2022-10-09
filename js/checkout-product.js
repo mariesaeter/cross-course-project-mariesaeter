@@ -1,6 +1,12 @@
+import { displayCount } from "./components/count-in-basket.js";
+
 const cartItemContainer = document.querySelector(".cart-item");
+const cart = document.querySelector(".cart-container");
 const jacketInfo = document.querySelector(".cart-jacket-info");
 const delProduct = document.querySelector(".trash-can");
+const numberInBasket = document.querySelector(".basket-number");
+const emptyCart = document.querySelector(".empty-cart");
+const checkoutForms = document.querySelector(".checkout-forms");
 
 console.log(delProduct);
 
@@ -18,6 +24,11 @@ console.log(product);
 
 // create html for product item
 function createHtml() {
+  if (localStorage.product) {
+    cart.style.display = "flex";
+    emptyCart.style.display = "none";
+    checkoutForms.style.display = "block";
+  }
   jacketInfo.innerHTML += `<div class="cart-product">
                                     <a href="../jacket-specific.html">
                                     <h3>${product.name}</h3>
@@ -26,14 +37,20 @@ function createHtml() {
                                     </div>`;
 }
 
-const cart = createHtml(product);
+const cartHtml = createHtml(product);
 
-// delete product from cart (not working)
+// delete product from cart
 function deleteProduct() {
-  window.localStorage.removeItem("product");
+  window.localStorage.clear();
 
-  cartItemContainer.innerHTML = "";
-  delProduct.style.display = "none";
+  cart.innerHTML = ""; // remove product
+  delProduct.style.display = "none"; // remove trash-can button
+  emptyCart.style.display = "block";
+
+  displayCount();
 }
 
 delProduct.addEventListener("click", deleteProduct);
+
+// change number in basket?
+numberInBasket.innerHTML = localStorage.clickcount;

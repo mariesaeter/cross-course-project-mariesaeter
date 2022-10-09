@@ -1,6 +1,9 @@
+// export const counter = document.querySelector(".counter");
+// export const counterBackground = document.querySelector(".cart-count");
+import { displayCount } from "./components/count-in-basket.js";
+
 const addToCart = document.querySelector(".cta-add-to-cart");
 const addedToCart = document.querySelector(".added-to-cart");
-const counter = document.querySelector(".counter");
 
 // addToCart.addEventListener("click", function onClick() {
 //   addToCart.style.backgroundColor = "#5b7e0e";
@@ -55,23 +58,24 @@ function addJacket() {
   let local = window.localStorage.setItem("product", JSON.stringify(jacket));
   console.log(local);
 
-  if (localStorage.clickcount) {
-    localStorage.clickcount = Number(localStorage.clickcount) + 1;
-  } else {
-    localStorage.clickcount = 0;
-  }
-  counter.innerHTML = localStorage.clickcount;
+  numberInCart();
 }
-
-addToCart.addEventListener("click", addJacket);
 
 // function for adding the number of count to the basket counter
 // https://www.w3schools.com/jsrEF/prop_win_localstorage.asp
-// function count() {
-//   if (localStorage.clickcount) {
-//     localStorage.clickcount = Number(localStorage.clickcount) + 1;
-//   } else {
-//     localStorage.clickcount = 0;
-//   }
-//   counter.innerHTML = localStorage.clickcount;
-// }
+function numberInCart() {
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    // counter.style.display = "block";
+    // counterBackground.style.display = "block";
+  } else {
+    localStorage.clickcount = 1;
+  }
+  displayCount();
+  //   newCount;
+
+  //displayCount();
+}
+// export const newCount = (counter.innerHTML = localStorage.clickcount);
+
+addToCart.addEventListener("click", addJacket);

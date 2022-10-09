@@ -34,7 +34,7 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 </head>
-<body>
+<body class="active">
     <header class="flexbox">
         <a class="logo-home"href="index.html">
         <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
@@ -53,7 +53,8 @@
           <li><a class="menu-item" href="about.html">About</a></li>
       </ul>
       <ul id="icons">
-          <li><a href="checkout.html">
+          <li class="active-icon"><a class="cart-figure" href="checkout.html">
+            <div class="cart-count"><div class="counter">0</div></div>
             <figure>
             <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
             <figcaption>Basket</figcaption>
@@ -91,6 +92,7 @@
         <section class="container-checkout">
             <section class="shopping-cart">
                 <h2>Shopping cart</h2>
+                <div class="empty-cart">The shopping cart is empty :(</div>
                 <div class="cart-container">
                 <button class="trash-can"></button><div class="cart-item">
                     <img src="/images/products/red.jpg" alt="man with red jacket">
@@ -105,7 +107,7 @@
                     </div> -->
                     <div class="cart-jacket-number">
                         <button class="subtract"></button>
-                        <span class="number">1</span>
+                        <div class="basket-number">1</div>
                         <button class="add"></button>
                     </div>
                     <!-- <h4>1 999 NOK</h4> -->
@@ -153,12 +155,12 @@
                         <li>
                         <label for="firstname">First name</label>
                         <input type="text" name="firstname" id="firstname">
-                        <div id="firstNameError" class="form-error">First name must be at least 1 character</div>
+                        <div id="firstNameError" class="form-error short-error">First name must be at least 1 character</div>
                         </li>
                         <li>
                         <label for="lastname">Last name</label>
                         <input type="text" name="lastname" id="lastname">
-                        <div id="lastNameError" class="form-error">Last name must be at least 1 character</div>
+                        <div id="lastNameError" class="form-error short-error">Last name must be at least 1 character</div>
                         </li>
                         </div>
                         <li>
@@ -170,18 +172,18 @@
                         <li>
                         <label for="postalcode">Postal code</label>
                         <input type="text" name="postalcode" id="postalcode">
-                        <div id="postalCodeError" class="form-error">Postal code must be 4 characters</div>
+                        <div id="postalCodeError" class="form-error short-error">Postal code must be 4 characters</div>
                         </li>
                         <li>
                         <label for="Town">Town</label>
                         <input type="text" name="town" id="town">
-                        <div id="townError" class="form-error">Town must be at least 1 character</div>
+                        <div id="townError" class="form-error short-error">Town must be at least 1 character</div>
                         </li>
                         </div>
                         <li>
                         <label for="emailaddress">Email address</label>
                         <input type="email" name="emailaddress" id="emailaddress">
-                        <div id="emailError" class="form-error">Email must be in this format (example)</div>
+                        <div id="emailError" class="form-error email-error">E-mail must follow this format: example@mail.com</div>
                         </li>
                         <li>
                         <label for="phonenumber">Phone number</label>
@@ -190,10 +192,9 @@
                         </li>
                         </ul>
                 </div>
-           
           <div class="billing">
             <h2>Billing</h2>
-            
+            <div class="billing-form">
                 <ul>
                     <li>
                     <label for="cardholder">Cardholder name</label>
@@ -209,18 +210,19 @@
                     <li>
                     <label for="expirationdate">Expiration date</label>
                     <input type="text" name="expirationdate" id="expirationdate">
-                    <div id="expirationError" class="form-error">Expiration date must be in the format MM/YY</div>
+                    <div id="expirationError" class="form-error short-error">Expiration date must be in the format MM/YY</div>
                     </li>
                     <li>
                     <label for="ccv">CCV-code</label>
                     <input type="text" name="ccv" id="ccv">
-                    <div id="ccvError" class="form-error">CCV must be 3 numbers</div>
+                    <div id="ccvError" class="form-error short-error">CCV must be 3 numbers</div>
                     </li>
                     </div>
                 </ul>
                 <button type="submit" class="cta" id="pay">Pay</button>
                 <!-- <a href="checkout-success.html" class="cta">Pay
                 </a> -->
+            </div>
             </form>
             
           </div>
@@ -245,7 +247,8 @@
         </section>
     </footer>
     <script src="js/hamburger.js"></script>
-    <script src="js/checkout-product.js"></script>
-    <script src="js/checkout.js"></script>
+   <script src="js/components/count-in-basket.js" type="module"></script>
+    <script src="js/checkout-product.js" type="module"></script>
+    <script src="js/checkout.js" type="module"></script>
 </body>
 </html>

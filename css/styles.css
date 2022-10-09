@@ -175,6 +175,14 @@ body.active li.active a {
   color: var(--bright-blue);
 }
 
+.active-icon a {
+  color: var(--orange);
+}
+
+.icon {
+  display: none;
+}
+
 nav ul,
 footer ul,
 .address-form ul,
@@ -838,6 +846,7 @@ button.filter {
 }
 
 .cart-count {
+  display: none;
   background-color: var(--orange);
   width: 20px;
   height: 20px;
@@ -847,6 +856,7 @@ button.filter {
   right: 5px;
 }
 .counter {
+  display: none;
   color: var(--light-blue);
   position: absolute;
   width: 20px;
@@ -854,15 +864,6 @@ button.filter {
   top: 1px;
   text-align: center;
 }
-
-/*  */
-/* #add-to-cart:checked ~ .cta-add-to-cart::before {
-  content: "Added";
-}
-#add-to-cart:checked ~ .cta-add-to-cart:hover {
-  border: 3px solid transparent;
-  color: var(--light-blue);
-} */
 
 .product-description {
   margin-bottom: 10px;
@@ -1004,6 +1005,7 @@ button.filter {
   position: absolute;
   right: 0px;
   top: 0px;
+  border: none;
 }
 
 .cart-jacket-number {
@@ -1035,9 +1037,10 @@ button.filter {
   background-color: rgba(252, 129, 24, 0.7);
 }
 
-.cart-jacket-number .number {
+.cart-jacket-number .basket-number {
   background-color: var(--light-blue);
   width: 45px;
+
   height: 45px;
   margin: 0 10px;
   padding-top: 10px;
@@ -1047,7 +1050,7 @@ button.filter {
 }
 
 .cart-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: relative;
 }
@@ -1100,6 +1103,10 @@ button.filter {
   text-decoration: underline;
 }
 
+.checkout-forms {
+  display: none;
+}
+
 .address-form,
 .billing-form {
   width: fit-content;
@@ -1126,12 +1133,14 @@ button.filter {
   column-gap: 15px;
 }
 
-.billing form {
+.billing-form,
+.contact-form form {
   position: relative;
   margin-bottom: 60px;
 }
 
-.billing a {
+.billing-form button,
+.contact-form button {
   position: absolute;
   right: 0;
   margin-top: 15px;
@@ -1139,8 +1148,10 @@ button.filter {
 
 .form-error {
   color: #c53c30;
-  max-width: 180px;
   display: none;
+}
+.short-error {
+  max-width: 180px;
 }
 
 .error-outline {
@@ -1167,22 +1178,22 @@ button.filter {
   display: flex;
   flex-direction: column;
 }
-.message-sent,
+
 #send-message {
   display: none;
 }
-#send-message:checked ~ .message-sent {
+.message-sent {
   display: inline-block;
   text-align: right;
   right: 50px;
-  margin-top: 15px;
+  margin-top: 100px;
 }
 
 .message-sent p {
   padding: 0;
 }
 
-.message-sent > p:first-child::before {
+.message > p:first-child::before {
   content: "";
   background-image: url(/images/checkmark-filled.png);
   width: 24px;

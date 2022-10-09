@@ -31,18 +31,19 @@
       <nav class="flexbox">
         <ul class="menu">
           <li><a class="menu-item" href="men.html">Men</a></li>
-          <li><a class="menu-item" href="women.html">Women</a></li>
+          <li class="active"><a class="menu-item" href="women.html">Women</a></li>
           <li><a class="menu-item" href="contact.html">Contact</a></li>
           <li><a class="menu-item" href="about.html">About</a></li>
       </ul>
         <ul class="nav-text">
           <li><a class="menu-item" href="men.html">Men</a></li>
-          <li><a class="menu-item" href="women.html">Women</a></li>
+          <li class="active"><a class="menu-item" href="women.html">Women</a></li>
           <li><a class="menu-item" href="contact.html">Contact</a></li>
           <li><a class="menu-item" href="about.html">About</a></li>
       </ul>
       <ul id="icons">
-          <li><a href="checkout.html">
+          <li><a class="cart-figure" href="checkout.html">
+            <div class="cart-count"><div class="counter">0</div></div>
             <figure>
             <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
             <figcaption>Basket</figcaption>
@@ -241,11 +242,13 @@
         <section class="subscribe">
             <h2>Get updates</h2>
             <p>Sign up to our newsletter to receive updates straight to your inbox!</p>
-            <form>
-              <label for="email">E-mail</label>
-              <input type="email" name="email">
-              <button class="dark-button" type="button">Sign Up</button>
-            </form>
+            <form class="subscribe-form">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <div class="form-error email-error">E-mail must follow this format: example@mail.com</div>
+                <button class="dark-button">Sign Up</button>
+                <div class="sub-message"></div>
+              </form>
           </section>
     </main>
         
@@ -268,5 +271,7 @@
           </section>
     </footer>
     <script src="js/hamburger.js"></script>
+    <script src="js/components/count-in-basket.js" type="module"></script>
+    <script src="js/components/subscribe-form.js" type="module"></script>
 </body>
 </html>
