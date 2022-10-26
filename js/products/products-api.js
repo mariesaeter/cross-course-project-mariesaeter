@@ -18,7 +18,7 @@ getProducts();
 
 function createHtml(products) {
   products.forEach(function (product) {
-    productSection.innerHTML += `<div class = "product-card">
+    productSection.innerHTML += `<a href="jacket-specific.html?id=${product.id}" class = "product-card">
                                     <div class = "product-image"> <img src="${product.images[0].src}" alt = ${product.name}></div>
                                     <div class = "product-info"> 
                                         <div class = "product-name"> 
@@ -30,6 +30,6 @@ function createHtml(products) {
                                         </div>
 
                                     </div>
-                                </div>`;
+                                </a>`;
   });
 }
