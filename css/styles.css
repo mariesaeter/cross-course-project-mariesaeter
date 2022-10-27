@@ -603,6 +603,23 @@ button.filter {
 }
 
 /* ---- JACKET SPECIFIC ---- */
+/* Loader inspiration: https://www.youtube.com/watch?v=QweWn6JJsSI */
+.loader {
+  border: 10px solid;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-color: var(--bright-blue) transparent transparent;
+  animation: spinner 1.5s linear infinite;
+  position: relative;
+  margin: auto;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Slideshow */
 .slideshow ol,
 .slideshow li {
@@ -689,7 +706,7 @@ button.filter {
   font-weight: bold;
 }
 
-.jacket-info ul {
+/* .jacket-info ul {
   list-style: none;
   margin-left: 25px;
   padding: 0;
@@ -700,42 +717,30 @@ button.filter {
   position: relative;
   padding: 0 5px;
   margin: 5px;
-}
+} */
 
-.jacket-info li input[type="radio"] {
+/* .colorContainer input[type="radio"] {
   display: none;
-}
+} */
 
-.radio-colors label:hover,
-.radio-sizes label:hover {
+.colorContainer label:hover,
+.sizeContainer label:hover {
   cursor: pointer;
 }
 
-.radio-colors li label::before {
+/* .colorContainer label::before {
   content: "";
   width: 30px;
   height: 30px;
   border-radius: 50%;
   position: relative;
+} */
+
+.colorContainer input {
+  display: none;
 }
 
-.radio-colors li label#color-swatch-red::before {
-  background-color: #c53c30;
-}
-
-.radio-colors li label#color-swatch-yellow::before {
-  background-color: #dbc200;
-}
-
-.radio-colors li label#color-swatch-blue::before {
-  background-color: #3c96b7;
-}
-
-.radio-colors li label#color-swatch-green::before {
-  background-color: #5b7e0e;
-}
-
-.radio-colors li input[type="radio"]:checked + label::after {
+.colorContainer input[type="radio"]:checked {
   border-radius: 0;
   width: 40px;
   height: 40px;
@@ -745,10 +750,25 @@ button.filter {
   position: absolute;
 }
 
-.jacket-info li label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.colorContainer label {
+  display: inline-block;
+  border-radius: 50%;
+  min-width: 30px;
+  min-height: 30px;
+}
+.colorContainer label:nth-child(1) {
+  background-color: #c53c30;
+}
+.colorContainer label:nth-child(2) {
+  background-color: #dbc200;
+}
+
+.colorContainer label:nth-child(3) {
+  background-color: #3c96b7;
+}
+
+.colorContainer label:nth-child(4) {
+  background-color: #5b7e0e;
 }
 
 .radio-sizes {
@@ -1281,29 +1301,6 @@ button.filter {
   .product-section {
     width: 90%;
     margin: 0 auto;
-  }
-
-  .loader {
-    border: 10px solid;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border-color: var(--bright-blue) transparent transparent;
-    animation: spinner 1.5s linear infinite;
-    position: relative;
-    margin: auto;
-
-    /* margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0; */
-  }
-
-  @keyframes spinner {
-    100% {
-      transform: rotate(360deg);
-    }
   }
 
   .product-card {
