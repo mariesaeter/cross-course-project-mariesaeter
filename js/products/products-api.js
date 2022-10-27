@@ -8,6 +8,7 @@ async function getProducts() {
     const response = await fetch(url);
     const products = await response.json();
 
+    productSection.innerHTML = "";
     createHtml(products);
   } catch (error) {
     console.log(error);

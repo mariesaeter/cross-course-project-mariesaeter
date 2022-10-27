@@ -1282,6 +1282,30 @@ button.filter {
     width: 90%;
     margin: 0 auto;
   }
+
+  .loader {
+    border: 10px solid;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-color: var(--bright-blue) transparent transparent;
+    animation: spinner 1.5s linear infinite;
+    position: relative;
+    margin: auto;
+
+    /* margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+  }
+
+  @keyframes spinner {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   .product-card {
     flex-basis: 29%;
   }
