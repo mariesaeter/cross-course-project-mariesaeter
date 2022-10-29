@@ -1,6 +1,8 @@
+const slideshowContainer = document.querySelector(".slideshow");
 const infoContainer = document.querySelector(".infoContainer");
 const colorContainer = document.querySelector(".colorContainer");
 const sizeContainer = document.querySelector(".sizeContainer");
+const descriptionContainer = document.querySelector(".productDescription");
 
 const loader = document.querySelector(".loader");
 
@@ -34,6 +36,38 @@ fetchJacket();
 
 // function for creating jacket description html
 function createHtml(jacketDetails) {
+  slideshowContainer.innerHTML = `<div class="slide-wrapper">
+  <div class="slideshow-view">
+      <div id="slide1" class="slideshow-slide">
+         <div class="slideshow-snapper">
+            <img src="${jacketDetails.images[0].src}" alt="man with red jacket" class="slide-img">
+             <a href="#slide3" 
+             class="slide-prev"><img src="/images/products/chevron-left.png" alt="left arrow"></a> 
+             
+             <a href="#slide2" 
+             class="slide-next"><img src="/images/products/chevron-right.png" alt="right arrow"></a> 
+         </div>
+     </div>
+     <div id="slide2" class="slideshow-slide">
+         <div class="slideshow-snapper">
+         <img src="${jacketDetails.images[1].src}" alt="man with red jacket" class="slide-img">
+             <a href="#slide1" 
+             class="slide-prev"><img src="/images/products/chevron-left.png" alt="left arrow"></a> 
+             <a href="#slide3" 
+             class="slide-next"><img src="/images/products/chevron-right.png" alt="right arrow"></a> 
+         </div>
+     </div>
+     <div id="slide3" class="slideshow-slide">
+         <div class="slideshow-snapper">
+         <img src="${jacketDetails.images[2].src}" alt="man with red jacket walking toward the coast" class="slide-img">
+             <a href="#slide2" 
+             class="slide-prev"><img src="/images/products/chevron-left.png" alt="left arrow"></a> 
+             <a href="#slide1" 
+             class="slide-next"><img src="/images/products/chevron-right.png" alt="right arrow"></a> 
+         </div>
+     </div>
+  </div>
+ </div>`;
   infoContainer.innerHTML = `<div class="jacket-info"> 
                                             <div class="jacket-name">
                                                 <h1>${jacketDetails.name}</h1>
@@ -41,6 +75,15 @@ function createHtml(jacketDetails) {
                                                 <h3>$${jacketDetails.price}</h3>
                                             </div>
                                         </div>`;
+  descriptionContainer.innerHTML = `<div class="product-description"> 
+                                    <input type="checkbox" id="description">
+                                    <label for="description" id="h2-description"><h2>Description</h2></label>
+                                    <div id="description-info">${jacketDetails.description}</div>
+                                    </div>
+                                    <div class="product-description">
+                                    <input type="checkbox" id="size-guide">
+                                    <label for="size-guide" id="h2-size"><h2>Size guide and fitting</h2></label>
+                                    <div id="size-info">Here is a table of measurements for the different sizes.</div>`;
 }
 
 // function for creating an array of the color choices

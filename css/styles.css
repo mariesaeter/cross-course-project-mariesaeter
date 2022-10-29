@@ -536,7 +536,12 @@ button.filter {
 
 /* --- products --- */
 
-/* .product-section {
+.product-section {
+  display: grid;
+  width: 90%;
+  padding: 0 15px 15px 15px;
+}
+/* .product-section { 
   display: flex;
   flex-wrap: wrap;
   padding: 0 15px 15px 15px;
@@ -620,12 +625,12 @@ button.filter {
   }
 }
 /* Slideshow */
-.slideshow ol,
+/* .slideshow ol,
 .slideshow li {
   list-style: none;
   margin: 0;
   padding: 0;
-}
+} */
 
 .slideshow {
   position: relative;
@@ -735,19 +740,28 @@ button.filter {
   position: relative;
 } */
 
+.colorContainer,
+.sizeContainer {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.colorContainer {
+  margin-left: 15px;
+}
+
 .colorContainer input,
 .sizeContainer input {
   display: none;
 }
 
-.colorContainer input[type="radio"]:checked {
+.colorContainer input[type="radio"]:checked + label {
   border-radius: 0;
   width: 40px;
   height: 40px;
-  background: transparent;
   border: 3px solid #0067d6;
-  content: "";
-  position: absolute;
 }
 
 .colorContainer label {
@@ -775,9 +789,7 @@ button.filter {
   width: 100%;
   text-align: center;
 }
-.sizeContainer div {
-  margin: 20px 0;
-}
+
 .sizeContainer label {
   display: inline-block;
   color: #0067d6;
@@ -791,7 +803,7 @@ button.filter {
   margin: 0 10px;
 }
 
-.radio-sizes li input[type="radio"]:checked + label::before {
+.sizeContainer input[type="radio"]:checked + label {
   border: 3px solid transparent;
   background-color: var(--bright-blue);
   border-radius: 25px;
@@ -799,7 +811,7 @@ button.filter {
   position: relative;
   text-align: center;
 }
-
+/* 
 .radio-sizes label::before {
   text-align: center;
 }
@@ -824,7 +836,7 @@ button.filter {
 .radio-sizes label.disabled#size-xxl::before,
 .radio-sizes input[type="radio"]:checked + label.disabled#size-xxl::before {
   content: "xxl";
-}
+} */
 
 .add-to-cart {
   text-align: center;
@@ -835,6 +847,7 @@ button.filter {
   padding: 15px 30%;
   width: 100%;
   display: inline-block;
+  margin: 50px auto;
 }
 
 .cart-figure {
@@ -1299,16 +1312,13 @@ button.filter {
   /* --- JACKET-SPECIFIC ---*/
   .container-jacket-specific {
     display: flex;
+    flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
   }
   .slideshow {
-    flex: 1;
+    /* flex: 1; */
     height: 600px;
-  }
-
-  .jacket-info {
-    flex: 1;
   }
 
   .slide-img {
