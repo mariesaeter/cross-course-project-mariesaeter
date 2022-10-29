@@ -743,13 +743,13 @@ button.filter {
 .colorContainer,
 .sizeContainer {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 
 .colorContainer {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .colorContainer input,
@@ -847,7 +847,7 @@ button.filter {
   padding: 15px 30%;
   width: 100%;
   display: inline-block;
-  margin: 50px auto;
+  margin-bottom: 50px;
 }
 
 .cart-figure {
@@ -908,13 +908,16 @@ button.filter {
 #size-guide,
 #size-info {
   display: none;
+  padding: 5px;
 }
 
 #description:checked ~ #description-info {
   display: block;
+  max-width: 600px;
 }
 #size-guide:checked ~ #size-info {
   display: block;
+  max-width: 600px;
 }
 
 #description:checked ~ #h2-description {
