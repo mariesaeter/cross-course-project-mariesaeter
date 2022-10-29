@@ -417,8 +417,8 @@ footer {
 }
 
 /* SECTION - Best sellers */
-section.bestsellers {
-  margin: 0, auto;
+.bestsellers {
+  margin: 0 auto;
   margin-top: 30px;
 }
 
@@ -427,11 +427,10 @@ section.bestsellers {
   margin-left: 20px;
 }
 
-.container-best-sellers {
-  display: grid;
+.bestsellers .product-section {
   justify-content: center;
-  overflow-x: auto;
-  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto;
   gap: 25px;
 } /*rest of the styling is gathered from the jacket list page */
 
@@ -537,13 +536,13 @@ button.filter {
 
 /* --- products --- */
 
-.product-section {
+/* .product-section {
   display: flex;
   flex-wrap: wrap;
   padding: 0 15px 15px 15px;
-}
+} */
 
-.product-card {
+/* .product-card {
   flex-grow: 1;
   flex-basis: 40%;
   margin: 2%;
@@ -551,12 +550,12 @@ button.filter {
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.container-product-filter .product-section .product-card:first-child,
+/* .container-product-filter .product-section .product-card:first-child,
 .container-product-filter .product-section .product-card:nth-child(2) {
   margin-top: 0;
-}
+} */
 
 .product-card:hover {
   transform: scale(1.02);
@@ -585,7 +584,7 @@ button.filter {
   background-size: 24px;
   background-repeat: no-repeat;
 }
-
+/* 
 .product-card .sale {
   position: absolute;
   top: 0;
@@ -596,7 +595,7 @@ button.filter {
   background-color: var(--orange);
   color: var(--light-blue);
   font-weight: bold;
-}
+} */
 
 .product-name span {
   text-decoration: line-through;
@@ -1277,6 +1276,15 @@ button.filter {
 
   /* MEN - JACKET LIST */
   .product-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+
+  .product-card {
+    margin: 10px;
+  }
+  /* .product-section {
     width: 90%;
     margin: 0 auto;
   }
@@ -1287,7 +1295,7 @@ button.filter {
   .product-section .product-card:first-child,
   .product-section .product-card:nth-child(2) {
     flex: 2 40%;
-  }
+  } */
   /* --- JACKET-SPECIFIC ---*/
   .container-jacket-specific {
     display: flex;
@@ -1355,10 +1363,6 @@ button.filter {
     padding: 46px 20px;
   }
 
-  .bestsellers .product-section .product-card {
-    flex-basis: 21%;
-  }
-
   /* SECTION - waterproof */
   .waterproof p {
     padding-left: 30%;
@@ -1367,6 +1371,11 @@ button.filter {
 
   .search {
     width: 50%;
+  }
+
+  /* --- PRODUCT PAGE --- */
+  .product-section {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   /* --- JACKET SPECIFIC --- */
@@ -1429,6 +1438,10 @@ button.filter {
     margin-left: 11%;
   }
 
+  .product-section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
   .container-product-filter {
     display: flex;
     flex-direction: row;
@@ -1440,7 +1453,7 @@ button.filter {
   button.filter {
     display: none;
   }
-  .container-product-filter .product-card {
+  /* .container-product-filter .product-card {
     flex-basis: 21%;
   }
 
@@ -1451,7 +1464,7 @@ button.filter {
   .container-product-filter .product-section .product-card:nth-child(3),
   .container-product-filter .product-section .product-card:nth-child(4) {
     margin-top: 0;
-  }
+  } */
 
   #filter-box {
     width: 200px;
