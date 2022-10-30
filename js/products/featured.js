@@ -3,6 +3,7 @@ const url =
 
 const productSection = document.querySelector(".product-section");
 
+// call for product api to create html for featured jackets
 async function getFeatured() {
   try {
     const response = await fetch(url);
@@ -17,6 +18,7 @@ async function getFeatured() {
 
 getFeatured();
 
+// function to display featured products
 function createHtml(products) {
   products.forEach(function (product) {
     if (product.featured === true) {

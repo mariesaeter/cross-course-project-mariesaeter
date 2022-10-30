@@ -3,6 +3,7 @@ const url =
 
 const productSection = document.querySelector(".product-section");
 
+// call api to create html on product page
 async function getProducts() {
   try {
     const response = await fetch(url);
@@ -17,6 +18,7 @@ async function getProducts() {
 
 getProducts();
 
+// function for displaying products
 function createHtml(products) {
   products.forEach(function (product) {
     productSection.innerHTML += `<a href="jacket-specific.html?id=${product.id}" class = "product-card">

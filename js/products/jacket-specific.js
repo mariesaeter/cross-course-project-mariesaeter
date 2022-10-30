@@ -117,6 +117,7 @@ function createColorArray(jacketDetails) {
   }
 }
 
+// function for creating an array of the size choices
 function createSizeArray(jacketDetails) {
   const sizeArray = jacketDetails.attributes[0].options;
 
@@ -143,24 +144,3 @@ function createSizeArray(jacketDetails) {
     }
   }
 }
-
-// creating radio buttons
-// Inspiration: https://softauthor.com/javascript-dynamic-html-radio-button/
-// for (let color of colorArray) {
-//   let label = document.createElement("label");
-
-//   let input = document.createElement("input");
-//   input.type = "radio";
-//   input.name = "color";
-//   input.value =
-
-//   // input.addEventListener("change", () => {
-//   //   Object.keys(colorArray).forEach((color) => {
-//   //     colorArray[color] = false;
-//   //   });
-//   //   colorArray[color] = true;
-//   // });
-//   label.appendChild(input);
-
-//   colorContainer.appendChild(label);
-// }
