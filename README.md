@@ -11,5 +11,5 @@ A project made during Noroff School of Technology and Digital Media year 1 for c
 + CSS
 + Vanilla JavaScript
 
-# Acknowledgement
-## Inspiration
+## Acknowledgement
+### Inspiration
