@@ -20,14 +20,15 @@ An e-commerce website for a fictive jacket store. Made during Noroff School of T
 ### Installing
 1. Clone the repo
 ```bash
-git clone https://github.com/mariesaeter/cross-course-project-mariesaeter.git
+https://github.com/mariesaeter/cross-course-project-mariesaeter.git
 ```
 no dependencies
 
 ### Running
 
 ## Contact
-[My Linkdin Page](www.linkedin.com/in/marie-sæter-954821207). Feel free to contact me!
+[My LinkedIn Page](www.linkedin.com/in/marie-sæter-954821207) 
+Feel free to contact me!
 
 ## Acknowledgement
 ### Inspiration
