@@ -10,6 +10,7 @@ An e-commerce website for a fictive jacket store. Made during Noroff School of T
 
 + The project's goal was to use what I had learned of HTML and CSS in action.
 + The website is built responsive without the use of any framework.
++ All design choices have been done by me, except from the logo which was given in the assignment.
 
 ## Built with
 + HTML
