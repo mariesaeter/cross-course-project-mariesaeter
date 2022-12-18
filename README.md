@@ -21,11 +21,21 @@ An e-commerce website for a fictive jacket store. Made during Noroff School of T
 ### Installing
 1. Clone the repo
 ```bash
-https://github.com/mariesaeter/cross-course-project-mariesaeter.git
+git clone https://github.com/mariesaeter/cross-course-project-mariesaeter.git
 ```
 no dependencies
 
-### Running
+## Contributing
+### Issues
+Feel free to submit issues and requests for improvements.
+
+### Pull requests
+
+1. Fork the repo on GitHub
+2. Install the repo on your own computer
+3. Commit changes to the new branch you created
+4. Push your work up to your fork
+5. Submit a Pull request so that your changes can be reviewed
 
 ## Contact
 [My LinkedIn Page](www.linkedin.com/in/marie-sæter-954821207) 
