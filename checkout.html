@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Basket - Rainydays</title>
+    <meta name="description" content="The checkout page for Rainydays">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <!--Link to CSS file-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="active">
+    <header class="flexbox">
+        <a class="logo-home"href="index.html">
+        <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
+      </a>
+      <nav class="flexbox">
+        <ul class="menu">
+          <li><a class="menu-item" href="men.html">Men</a></li>
+          <li><a class="menu-item" href="women.html">Women</a></li>
+          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li><a class="menu-item" href="about.html">About</a></li>
+      </ul>
+        <ul class="nav-text">
+          <li><a class="menu-item" href="men.html">Men</a></li>
+          <li><a class="menu-item" href="women.html">Women</a></li>
+          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li><a class="menu-item" href="about.html">About</a></li>
+      </ul>
+      <ul id="icons">
+          <li class="active-icon"><a class="cart-figure" href="checkout.html">
+            <div class="cart-count"><div class="counter">0</div></div>
+            <figure>
+            <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
+            <figcaption>Basket</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/favorite.png" alt="favorite heart">
+            <figcaption>Favorite</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/login.png" alt="user">
+            <figcaption>Profile</figcaption>
+            </figure>
+          </a></li>
+        </ul>
+        <button class="hamburger-btn">
+          <img class="hamburger" src="images/header&footer/menu.png" alt="hamburger menu">
+          <img class="close" src="images/header&footer/close.png" alt="close"
+        </button>
+      </nav>
+      </header>   
+    <main>
+        <section class="page-heading">
+            <div class="breadcrumbs">
+              <a href="index.html">Home</a>
+              >
+              <a href="checkout.html" class="current-breadcrumbs">Basket</a>
+          </div>
+          <h1>Basket</h1>
+        </section>
+
+        <section class="container-checkout">
+            <section class="shopping-cart">
+                <h2>Shopping cart</h2>
+                <div class="empty-cart">The shopping cart is empty :(</div>
+                <div class="cart-container">
+                <button class="trash-can"></button><div class="cart-item">
+                    <img src="/images/products/red.jpg" alt="man with red jacket">
+                    <div class="jacket-info-container">
+                        <div class="cart-jacket-info">
+                            
+                        </div>
+                    <div class="cart-jacket-number">
+                        <button class="subtract"></button>
+                        <div class="basket-number">1</div>
+                        <button class="add"></button>
+                    </div>
+                </div>
+                </div>
+                <div class="discount-code">
+                    <label for="discount">Discount code:</label>
+                    <input type="text" name="discount">
+                    <button class="dark-button" type="button">Confirm</button>
+                </div>
+                </div>
+            </section>
+            <section class="checkout-forms">
+                <div class="light-section">
+                    <h2>Summary</h2>
+                    <p>Expected delivery 3-4 days from shipping.</p>
+                    <div class="summary-info">
+                        <div class="p-two-columns">
+                    <p>Sum</p>
+                    <p>1 999 NOK</p>
+                    </div>
+                    <div class="p-two-columns">
+                    <p>Shipping</p>
+                    <p>69 NOK</p>
+                    </div>
+                    <div class="p-two-columns total">
+                    <p>Total sum (including 25% vat.) </p>
+                    <p>2 068 NOK</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="address">
+                    <h2>Address</h2>
+                    <div class="p-two-columns">
+                        <p>If you're already a member</p>
+                        <a href="checkout.html" class="text-link-orange">Sign in</a>
+                    </div>
+                    <div class="p-two-columns">
+                        <p>If not</p>
+                        <a href="checkout.html" class="text-link-blue">Register account</a>
+                    </div>
+                    <form class="address-form" method="POST">
+                        <ul>
+                        <div class="address-name">
+                        <li>
+                        <label for="firstname">First name</label>
+                        <input type="text" name="firstname" id="firstname">
+                        <div id="firstNameError" class="form-error short-error">First name must be at least 1 character</div>
+                        </li>
+                        <li>
+                        <label for="lastname">Last name</label>
+                        <input type="text" name="lastname" id="lastname">
+                        <div id="lastNameError" class="form-error short-error">Last name must be at least 1 character</div>
+                        </li>
+                        </div>
+                        <li>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address">
+                        <div id="addressError" class="form-error">Address must be at least 3 characters</div>
+                        </li>
+                        <div class="postal-town">
+                        <li>
+                        <label for="postalcode">Postal code</label>
+                        <input type="text" name="postalcode" id="postalcode">
+                        <div id="postalCodeError" class="form-error short-error">Postal code must be 4 numbers</div>
+                        </li>
+                        <li>
+                        <label for="Town">Town</label>
+                        <input type="text" name="town" id="town">
+                        <div id="townError" class="form-error short-error">Town must be at least 1 character</div>
+                        </li>
+                        </div>
+                        <li>
+                        <label for="emailaddress">Email address</label>
+                        <input type="email" name="emailaddress" id="emailaddress">
+                        <div id="emailError" class="form-error email-error">E-mail must follow this format: example@mail.com</div>
+                        </li>
+                        <li>
+                        <label for="phonenumber">Phone number</label>
+                        <input type="tel" name="phonenumber" id="phonenumber">
+                        <div id="phoneNumberError" class="form-error">Phone number must be 8 numbers</div>
+                        </li>
+                        </ul>
+                </div>
+          <div class="billing">
+            <h2>Billing</h2>
+            <div class="billing-form">
+                <ul>
+                    <li>
+                    <label for="cardholder">Cardholder name</label>
+                    <input type="text" name="cardholder" id="cardholder">
+                    <div id="cardHolderError" class="form-error">Cardholder name must be at least 1 character</div>
+                    </li>
+                    <li>
+                    <label for="cardnumber">Card number</label>
+                    <input type="text" name="cardnumber" id="cardnumber">
+                    <div id="cardNumberError" class="form-error">Card number must be 16 numbers</div>
+                    </li>
+                    <div class="expiration-ccv">
+                    <li>
+                    <label for="expirationdate">Expiration date</label>
+                    <input type="text" name="expirationdate" id="expirationdate">
+                    <div id="expirationError" class="form-error short-error">Expiration date must be in the format MM/YY</div>
+                    </li>
+                    <li>
+                    <label for="ccv">CCV-code</label>
+                    <input type="text" name="ccv" id="ccv">
+                    <div id="ccvError" class="form-error short-error">CCV must be 3 numbers</div>
+                    </li>
+                    </div>
+                </ul>
+                <button type="submit" class="cta" id="pay">Pay</button>
+            </div>
+            </form>
+            
+          </div>
+          </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact and Help</a></li>
+            </ul> 
+        </div>
+        <div class="footer-settings">
+            <ul>
+            <li><a href="/">Settings for cookies</a></li>
+            <li><a href="/">Privacy & Policy</a></li>
+        </div>
+        <section class="footer-social">
+            <h2>Follow Rainydays</h2>
+            <a href="/"><img src="images/header&footer/facebook.png" alt="facebook logo"></a>
+            <a href="/"><img src="images/header&footer/instagram.png" alt="instagram logo"></a>
+        </section>
+    </footer>
+    <script src="js/hamburger.js"></script>
+   <script src="js/components/count-in-basket.js" type="module"></script>
+    <script src="js/checkout-product.js" type="module"></script>
+    <script src="js/checkout.js" type="module"></script>
+</body>
+</html>

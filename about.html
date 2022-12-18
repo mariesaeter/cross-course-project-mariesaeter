@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About - Rainydays</title>
+    <meta name="description" content="The about page for Rainydays">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <!--Link to CSS file-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="active">
+    <header class="flexbox">
+        <a class="logo-home"href="index.html">
+        <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
+      </a>
+      <nav class="flexbox">
+        <ul class="menu">
+          <li><a class="menu-item" href="men.html">Men</a></li>
+          <li><a class="menu-item" href="women.html">Women</a></li>
+          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li class="active"><a class="menu-item" href="about.html">About</a></li>
+      </ul>
+        <ul class="nav-text">
+          <li><a class="menu-item" href="men.html">Men</a></li>
+          <li><a class="menu-item" href="women.html">Women</a></li>
+          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li class="active"><a class="menu-item" href="about.html">About</a></li>
+      </ul>
+      <ul id="icons">
+          <li><a class="cart-figure" href="checkout.html">
+            <div class="cart-count"><div class="counter">0</div></div>
+            <figure>
+            <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
+            <figcaption>Basket</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/favorite.png" alt="favorite heart">
+            <figcaption>Favorite</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/login.png" alt="user">
+            <figcaption>Profile</figcaption>
+            </figure>
+          </a></li>
+        </ul>
+        <button class="hamburger-btn">
+          <img class="hamburger" src="images/header&footer/menu.png" alt="hamburger menu">
+          <img class="close" src="images/header&footer/close.png" alt="close"
+        </button>
+      </nav>
+      </header>   
+    <main>
+          
+        <section class="page-heading">
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            >
+            <a href="about.html" class="current-breadcrumbs">About</a>
+        </div>
+        <h1 id="about">About</h1>
+        </section>
+
+        <section class="container-about">
+            <div id="about-img"></div>
+            <div class="container-about-text">
+                <div class="about-light-section">
+                    <h2>Pushing the comfort zone</h2>
+                    <p>Our vision and brand. Years. Fruit you'll which Likeness 
+                        open us cattle Forth midst doesn't. Behold forth very 
+                        thing days make. Deep you'll open god. Forth great living 
+                        you'll above seas every.</p>
+                </div>
+                <div class="waterproof">
+                    <h2>Rainydays' unique jacket</h2>
+                    <p>Jacket for all kinds of outdoor activities, water- and windproof, 
+                        fresh and visible design</p>
+                </div>
+                <div class="about-light-section">
+                    <h2>Our history</h2>
+                    <p>Form I third firmament all which. Own that and unto isn't subdue 
+                        him third spirit may brought. Yielding earth without form. 
+                        Divided open also beast one created day saw moved air under abundantly 
+                        don't blessed two fly creature. Divide earth whales Good two. Stars rule.</p>
+                    <p>Called herb open image living whales. You isn't give and days for face tree, said. 
+                        There whales waters called life above, moving under behold to together.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <h2>Get updates</h2>
+            <p>Sign up to our newsletter to receive updates straight to your inbox!</p>
+            <form class="subscribe-form">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email">
+              <div class="form-error email-error">E-mail must follow this format: example@mail.com</div>
+              <button class="dark-button">Sign Up</button>
+              <div class="sub-message"></div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact and Help</a></li>
+          </ul> 
+        </div>
+        <div class="footer-settings">
+          <ul>
+          <li><a href="/">Settings for cookies</a></li>
+          <li><a href="/">Privacy & Policy</a></li>
+        </div>
+        <section class="footer-social">
+          <h2>Follow Rainydays</h2>
+          <a href="/"><img src="images/header&footer/facebook.png" alt="facebook logo"></a>
+          <a href="/"><img src="images/header&footer/instagram.png" alt="instagram logo"></a>
+        </section>
+      </footer>
+      
+      <script src="js/hamburger.js"></script>
+      <script src="js/components/count-in-basket.js" type="module"></script>
+      <script src="js/components/subscribe-form.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <!--All images are from unsplash.com-->
+  <!--All icons are from Carbon pack in the Auto Icon plugin in XD License: Apache 2.0-->
+  <head>
+    <meta charset="utf-8">
+    <title>Home - Rainydays</title>
+    <meta name="description" content="The home page for Rainydays">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <!--Link to CSS file-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+  <body>
+    <header class="flexbox">
+      <a class="logo-home"href="index.html">
+      <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
+    </a>
+    <nav class="flexbox">
+      <ul class="menu">
+        <li><a class="menu-item" href="men.html">Men</a></li>
+        <li><a class="menu-item" href="women.html">Women</a></li>
+        <li><a class="menu-item" href="contact.html">Contact</a></li>
+        <li><a class="menu-item" href="about.html">About</a></li>
+    </ul>
+      <ul class="nav-text">
+        <li><a class="menu-item" href="men.html">Men</a></li>
+        <li><a class="menu-item" href="women.html">Women</a></li>
+        <li><a class="menu-item" href="contact.html">Contact</a></li>
+        <li><a class="menu-item" href="about.html">About</a></li>
+    </ul>
+    <ul id="icons">
+        <li><a class="cart-figure" href="checkout.html">
+          <div class="cart-count"><div class="counter">0</div></div>
+          <figure>
+          <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
+          <figcaption>Basket</figcaption>
+          </figure>
+        </a></li>
+        <li class="icon"><a href="/">
+          <figure>
+          <img src="images/header&footer/favorite.png" alt="favorite heart">
+          <figcaption>Favorite</figcaption>
+          </figure>
+        </a></li>
+        <li class="icon"><a href="/">
+          <figure>
+          <img src="images/header&footer/login.png" alt="user">
+          <figcaption>Profile</figcaption>
+          </figure>
+        </a></li>
+      </ul>
+      <button class="hamburger-btn">
+        <img class="hamburger" src="images/header&footer/menu.png" alt="hamburger menu">
+        <img class="close" src="images/header&footer/close.png" alt="close"
+      </button>
+    </nav>
+    </header>
+    <main>
+      <section class="search-container"><form class="search">
+        <input type="text" placeholder="Search"/>
+        <button type="submit"><img src="images/header&footer/search-grey.png" alt="search"></button>
+      </form>
+    </section>
+      <section class="container-shopnav">
+        <div class="item-shop-men wrapper">
+          <a class="cta bottom" href="men.html">Men</a>
+        </div>
+        <div class="item-shop-men item-shop-women wrapper">
+          <a class="cta bottom" href="women.html">Women</a>
+        </div>
+      </section>
+      <section class="waterproof">
+        <h1>100% waterproof</h1>
+        <h2>High durability and comfort</h2>
+        <p>Rainydays' jackets are coated to be sustain high amount of rain and snow, 
+          without loosing the comforting feel of wearing the jacket.</p>
+        <a class="cta cta-light" href="about.html">Learn More</a>
+      </section>
+      <section class="bestsellers">
+        <h2>Best Sellers</h2>
+        <div class="product-section"> 
+          <div class="loader"></div>
+        </div>
+        </section>
+      <section class="subscribe">
+        <h2>Get updates</h2>
+        <p>Sign up to our newsletter to receive updates straight to your inbox!</p>
+        <form class="subscribe-form">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email">
+          <div class="form-error email-error">E-mail must follow this format: example@mail.com</div>
+          <button class="dark-button">Sign Up</button>
+          <div class="sub-message"></div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact and Help</a></li>
+        </ul> 
+      </div>
+      <div class="footer-settings">
+        <ul>
+        <li><a href="/">Settings for cookies</a></li>
+        <li><a href="/">Privacy & Policy</a></li>
+      </div>
+      <section class="footer-social">
+        <h2>Follow Rainydays</h2>
+        <a href="/"><img src="images/header&footer/facebook.png" alt="facebook logo"></a>
+        <a href="/"><img src="images/header&footer/instagram.png" alt="instagram logo"></a>
+      </section>
+    </footer>
+  <script src="js/hamburger.js"></script>
+  <script src="js/components/count-in-basket.js" type="module"></script>
+  <script src="js/products/featured.js" type="module"></script>
+  <script src="js/components/subscribe-form.js" type="module"></script>
+
+</body>
+  
+</html>
+ 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Women jackets - Rainydays </title>
+    <meta name="description" content="The jacket list (men) for Rainydays">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <!--Link to CSS file-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body class="active">
+    <header class="flexbox">
+        <a class="logo-home"href="index.html">
+        <img src="images/header&footer/logo.png" alt="rainydays logo" class="logo">
+      </a>
+      <nav class="flexbox">
+        <ul class="menu">
+          <li><a class="menu-item" href="men.html">Men</a></li>
+          <li class="active"><a class="menu-item" href="women.html">Women</a></li>
+          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li><a class="menu-item" href="about.html">About</a></li>
+      </ul>
+        <ul class="nav-text">
+          <li><a class="menu-item" href="men.html">Men</a></li>
+          <li class="active"><a class="menu-item" href="women.html">Women</a></li>
+          <li><a class="menu-item" href="contact.html">Contact</a></li>
+          <li><a class="menu-item" href="about.html">About</a></li>
+      </ul>
+      <ul id="icons">
+          <li><a class="cart-figure" href="checkout.html">
+            <div class="cart-count"><div class="counter">0</div></div>
+            <figure>
+            <img src="images/header&footer/shopping-bag.png" alt="shopping basket">
+            <figcaption>Basket</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/favorite.png" alt="favorite heart">
+            <figcaption>Favorite</figcaption>
+            </figure>
+          </a></li>
+          <li class="icon"><a href="/">
+            <figure>
+            <img src="images/header&footer/login.png" alt="user">
+            <figcaption>Profile</figcaption>
+            </figure>
+          </a></li>
+        </ul>
+        <button class="hamburger-btn">
+          <img class="hamburger" src="images/header&footer/menu.png" alt="hamburger menu">
+          <img class="close" src="images/header&footer/close.png" alt="close"
+        </button>
+      </nav>
+      </header>   
+    <main>
+        <section class="search-container"><form class="search">
+            <input type="text" placeholder="Search"/>
+            <button type="submit"><img src="images/header&footer/search-grey.png" alt="search"></button>
+          </form>
+        </section>
+          
+        <section class="page-heading">
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            >
+            <a href="women.html" class="current-breadcrumbs">Women</a>
+        </div>
+        <h1>Women</h1>
+        </section>
+        <section class="container-product-filter">
+        <button class="dark-button filter">Filter</button>
+            <div id="filter-box">
+                <div>
+                    <h5>Size</h5>
+                    <ul>
+                        <li><input type="checkbox" name="size" value="xs" id="xs">
+                        <label for="xs">xs</label></li>
+                        <li><input type="checkbox" name="size" value="s" id="s">
+                        <label for="s">s</label></li>
+                        <li><input type="checkbox" name="size" value="m" id="m">
+                        <label for="m">m</label></li>
+                        <li><input type="checkbox" name="size" value="l" id="l">
+                        <label for="l">l</label></li>
+                        <li><input type="checkbox" name="size" value="xl" id="xl">
+                        <label for="xl">xl</label></li>
+                        <li><input type="checkbox" name="size" value="xxl" id="xxl">
+                        <label for="xxl">xxl</label></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Color</h5>
+                    <ul>
+                        <li><input type="checkbox" name="color" value="red" id="red">
+                        <label for="red">Red</label></li>
+                        <li><input type="checkbox" name="color" value="yellow" id="yellow">
+                        <label for="yellow">Yellow</label></li>
+                        <li><input type="checkbox" name="color" value="blue" id="blue">
+                        <label for="blue">Blue</label></li>
+                        <li><input type="checkbox" name="color" value="green" id="green">
+                        <label for="green">Green</label></li>
+                    </ul>
+                    </div>
+                </div>
+    
+       
+                <section class="product-section"> 
+                    <div class="loader"></div>
+                </section>
+    </section>
+
+        <section class="subscribe">
+            <h2>Get updates</h2>
+            <p>Sign up to our newsletter to receive updates straight to your inbox!</p>
+            <form class="subscribe-form">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <div class="form-error email-error">E-mail must follow this format: example@mail.com</div>
+                <button class="dark-button">Sign Up</button>
+                <div class="sub-message"></div>
+              </form>
+          </section>
+    </main>
+        
+    <footer>
+        <div class="footer-links">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact and Help</a></li>
+            </ul> 
+          </div>
+          <div class="footer-settings">
+            <ul>
+            <li><a href="/">Settings for cookies</a></li>
+            <li><a href="/">Privacy & Policy</a></li>
+          </div>
+          <section class="footer-social">
+            <h2>Follow Rainydays</h2>
+            <a href="/"><img src="images/header&footer/facebook.png" alt="facebook logo"></a>
+            <a href="/"><img src="images/header&footer/instagram.png" alt="instagram logo"></a>
+          </section>
+    </footer>
+    <script src="js/hamburger.js"></script>
+    <script src="js/components/count-in-basket.js" type="module"></script>
+    <script src="js/products/products-api.js" type="module"></script>
+    <script src="js/components/subscribe-form.js" type="module"></script>
+</body>
+</html>
