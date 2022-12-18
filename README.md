@@ -101,4 +101,9 @@ function createColorArray(jacketDetails) {
 
 ```
 
+### Images and icons
+
+Images are retrieved from [unsplash.com](https://unsplash.com)
+
+Icons are from the Autoicon plugin in Adobe XD and belong to the Carbon package
 
